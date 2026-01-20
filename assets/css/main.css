@@ -466,7 +466,7 @@ article.post {
 }
 
 .post .post-meta {
-  margin-bottom: 5px;
+  margin-bottom: 5px !important;
 }
 .post .post-meta .icon {
   margin-right: 5px;
