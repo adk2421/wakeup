@@ -232,7 +232,7 @@ table td {
 .site-title {
   color: #333333;
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 54px;
   letter-spacing: -1px;
   margin-bottom: 0;
@@ -267,7 +267,7 @@ table td {
 @media screen and (max-width: 600px) {
   .site-nav {
     position: absolute;
-    top: 9px;
+    top: 22px;
     right: 15px;
     background-color: #fdfdfd;
     border: 1px solid #e8e8e8;
@@ -290,6 +290,7 @@ table td {
     line-height: 0;
     padding-top: 10px;
     text-align: center;
+    box-shadow: 2px 2px 4px #898989;
   }
   .site-nav .menu-icon > svg {
     fill: rgb(66.25, 66.25, 66.25);
@@ -456,6 +457,7 @@ article.post {
 
 .post-title {
   font-size: 42px;
+  font-weight: 600;
   letter-spacing: -1px;
   line-height: 1;
 }
@@ -467,6 +469,7 @@ article.post {
 
 .post .post-meta {
   margin-bottom: 5px !important;
+  font-weight: 600;
 }
 .post .post-meta .icon {
   margin-right: 5px;
