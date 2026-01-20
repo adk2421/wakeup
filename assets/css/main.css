@@ -93,10 +93,10 @@ a {
   text-decoration: none;
 }
 a:visited {
-  color: rgb(22.9483471074, 86.2541322314, 168.5516528926);
+  color: #2a7ae2;
 }
 a:hover {
-  color: #111;
+  color: #757575;
   text-decoration: underline;
 }
 .social-media-list a:hover {
@@ -139,6 +139,8 @@ code {
 pre {
   padding: 8px 12px;
   overflow-x: auto;
+  border: 1px solid #a1a1a1;
+  border-radius: 4px;
 }
 pre > code {
   border: 0;
@@ -150,17 +152,17 @@ pre > code {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(1024px - (30px * 2));
-  max-width: calc(1024px - 30px * 2);
+  max-width: -webkit-calc(1200px - (30px * 2));
+  max-width: calc(1200px - 30px * 2);
   margin-right: auto;
   margin-left: auto;
   padding-right: 30px;
   padding-left: 30px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .wrapper {
-    max-width: -webkit-calc(1024px - (30px));
-    max-width: calc(1024px - (30px));
+    max-width: -webkit-calc(1200px - (30px));
+    max-width: calc(1200px - (30px));
     padding-right: 15px;
     padding-left: 15px;
   }
@@ -221,22 +223,28 @@ table td {
  * Site header
  */
 .site-header {
-  border-top: 5px solid rgb(66.25, 66.25, 66.25);
-  border-bottom: 1px solid #e8e8e8;
+  padding-top: 15px;
+  border-top: 5px solid #616161;
   min-height: 55.95px;
   position: relative;
 }
 
 .site-title {
-  font-size: 26px;
-  font-weight: 300;
+  color: #333333;
+  font-size: 32px;
+  font-weight: 500;
   line-height: 54px;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
 }
-.site-title, .site-title:visited {
-  color: rgb(66.25, 66.25, 66.25);
+.site-title:visited {
+  color: #333333;
+  text-decoration: none;
+}
+.site-title:hover {
+  color: #333333;
+  text-decoration: none;
 }
 
 .site-nav {
@@ -308,7 +316,6 @@ table td {
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid #e8e8e8;
   padding: 30px 0;
 }
 
@@ -350,7 +357,7 @@ table td {
   width: calc(45% - 30px / 2);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .footer-col-1,
   .footer-col-2 {
     width: -webkit-calc(50% - (30px / 2));
@@ -370,16 +377,16 @@ table td {
 }
 
 .home {
-	padding: 10px 20px;
+	padding: 20px 30px;
 	border-radius: 5px;
-	background-color: #80808030;
+	background-color: #80808020;
 }
 
 /**
  * Page content
  */
 .page-content {
-  padding: 30px 0;
+  padding: 60px 0;
   flex: 1;
 }
 
@@ -395,19 +402,30 @@ table td {
 .post-list {
   margin-left: 0;
 }
-.post-list > .post-card {
+.post-list > a {
+  text-decoration: none;
+}
+.post-list > a > .post-card {
   padding: 25px;
   margin: 10px;
   background-color: #f7f7f7;
   border-radius: 5px;
   margin-bottom: 20px;
-  box-shadow: 2px 2px 6px #bdbdbd;
+  box-shadow: 2px 2px 6px #cfcfcf;
+  transition: 0.3s;
 }
-.post-list > .post-card > .post-title {
+.post-list > a > .post-card:hover {
+  box-shadow: 2px 2px 12px #6e6e6e;
+}
+.post-list > a > .post-card > .post-title {
   margin-bottom: 3px;
+  font-size: 26px;
+  color: #24628c;
 }
-.post-list > .post-card > .post-short-content {
+.post-list > a > .post-card > .post-short-content {
   margin-bottom: 15px;
+  font-size: 18px;
+  color: #333333;
 }
 
 .post-meta {
@@ -423,8 +441,17 @@ table td {
 /**
  * Posts
  */
+article.post {
+  padding: 60px;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  border: 1px solid #b6b6b680;
+  box-shadow: 0px 0px 80px #acacac;
+}
+
 .post-header {
   margin-bottom: 30px;
+  border-bottom: 3px dashed #819aab;
 }
 
 .post-title {
@@ -432,10 +459,20 @@ table td {
   letter-spacing: -1px;
   line-height: 1;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .post-title {
     font-size: 36px;
   }
+}
+
+.post .post-meta {
+  margin-bottom: 5px;
+}
+.post .post-meta .icon {
+  margin-right: 5px;
+}
+.post .post-meta .separator {
+  margin: 0 5px;
 }
 
 .post-content {
@@ -444,7 +481,7 @@ table td {
 .post-content h2 {
   font-size: 32px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .post-content h2 {
     font-size: 28px;
   }
@@ -452,7 +489,7 @@ table td {
 .post-content h3 {
   font-size: 26px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .post-content h3 {
     font-size: 22px;
   }
@@ -460,7 +497,7 @@ table td {
 .post-content h4 {
   font-size: 20px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .post-content h4 {
     font-size: 18px;
   }

@@ -1,0 +1,58 @@
+.post.dark { filter: invert(100%); }
+
+.post.dark .post-header .icon { filter: invert(100%); }
+
+.post.dark .post-content p[class],
+.post.dark .post-content img,
+.post.dark .post-content code {
+	filter: invert(100%);
+}
+
+.post.dark .post-content figure pre code { filter: invert(0%); }
+
+.post p[class] { margin-bottom: 0px; }
+.post p.br { margin: 20px 0; }
+.post p img { padding: 20px 0; }
+
+
+.fs7 { font-size: 7px; }
+.fs8 { font-size: 8px; }
+.fs9 { font-size: 9px; }
+.fs10 { font-size: 10px; }
+.fs11 { font-size: 11px; }
+.fs12 { font-size: 12px; }
+.fs13 { font-size: 13px; }
+.fs14 { font-size: 14px; }
+.fs15 { font-size: 15px; }
+.fs16 { font-size: 16px; }
+.fs17 { font-size: 17px; }
+.fs18 { font-size: 18px; }
+.fs19 { font-size: 19px; }
+.fs20 { font-size: 20px; }
+.fs21 { font-size: 21px; }
+.fs22 { font-size: 22px; }
+.fs23 { font-size: 23px; }
+.fs24 { font-size: 24px; }
+
+.fw1 { font-weight: 100; }
+.fw2 { font-weight: 200; }
+.fw3 { font-weight: 300; }
+.fw4 { font-weight: 400; }
+.fw5 { font-weight: 500; }
+.fw6 { font-weight: 600; }
+.fw7 { font-weight: 700; }
+.fw8 { font-weight: 800; }
+.fw9 { font-weight: 900; }
+
+.red { color: red; }
+.orange { color: orange; }
+.yellow { color: yellow; }
+.green { color: green; }
+.blue { color: blue; }
+.navy { color: navy; }
+.violet { color: violet; }
+.purple { color: purple; }
+
+.white { color: #fdfdfd; }
+.carrot { color: #ed9121; }
+.classic-blue { color: #0f4c81; }
