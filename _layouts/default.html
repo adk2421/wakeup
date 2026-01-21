@@ -5,14 +5,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	{% seo %}
 
-	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-	<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-	<link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
-	<link href="{{ '/assets/images/favicon.ico' | relative_url }}" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+	<link href="{{ site.settings.url.img | relative_url }}/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+	<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/pretendardvariable.css">
+	{% if site.settings.menu.type == "top" %}
+		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/main.css">
+		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/post.css">
+	{% elsif site.settings.menu.type == "left" %}
+		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/base.css">
+	{% endif %}
 </head>
 <body>
-	{% include header.html %}
-	{{ content }}
-	{% include footer.html %}
+	{% if site.settings.menu.type == "top" %}
+		{% include menu-top.html %}
+		{{ content }}
+		{% include footer.html %}
+	{% elsif site.settings.menu.type == "left" %}
+		<div class="container">
+			{% include menu-left.html %}
+			{{ content }}
+			{% include footer.html %}
+		</div>
+		<script src="{{ site.settings.url.js | relative_url }}/menu.js"></script>
+	{% endif %}
 </body>
 </html>
