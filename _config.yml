@@ -25,10 +25,10 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/wakeup" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: 
-github_username: adk24211
+github_username: adk2421
 
 # Build settings
-# theme: minima
+# theme: wakeup
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -52,3 +52,18 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+settings:
+  url:
+    css: "/assets/css"
+    img: "/assets/images"
+    js: "/assets/js"
+  menu:
+    type: left # top | left
+
+personal:
+  profile:
+    name: 김지성
+    image: profile-image.png
+  link:
+    github: https://github.com/adk2421
