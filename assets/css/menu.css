@@ -1,52 +1,3 @@
-:root {
-	--classic-blue: #0f4c81;
-
-	--primary-color: var(--classic-blue);
-	--primary-light: #efefef;
-
-	--secondary-color: #7eaad2;
-	--secondary-light: #fdfdfd;
-
-	--text-color: #333333;
-	--bg-color: #fdfdfd;
-
-	--primary-border: #d6d6d6;
-	--secondary-border: #dfdfdf;
-
-	--primary-btn-active: var(--primary-color);
-	--primary-btn-active-text: var(--primary-light);
-	--primary-btn-hover: var(--secondary-color);
-	--primary-btn-hover-text: var(--secondary-light);
-
-	--primary-text-hover: #066cc5;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	display: flex;
-	min-height: 100vh;
-	font-family: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 1.5;
-	color: var(--text-color);
-	background-color: var(--bg-color);
-	-webkit-text-size-adjust: 100%;
-	-webkit-font-feature-settings: "kern" 1;
-	-moz-font-feature-settings: "kern" 1;
-	-o-font-feature-settings: "kern" 1;
-	font-feature-settings: "kern" 1;
-	font-kerning: normal;
-}
-
-.container {
-	display: flex;
-}
-
 .container .sidebar {
 	width: 300px;
 	min-width: 300px;
@@ -54,9 +5,23 @@ body {
 	user-select: none;
 }
 
+.container .sidebar div.hits {
+	padding: 12px 15px 25px 15px;
+    float: right;
+}
+
 .container .sidebar div.profile {
 	padding: 40px 70px 25px 70px;
 	border-bottom: 1px solid var(--primary-border);
+}
+
+.container .sidebar div.profile a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+.container .sidebar div.profile a:hover {
+	filter: opacity(0.6);
 }
 
 .container .sidebar div.profile .profile-image {
@@ -65,6 +30,8 @@ body {
 
 .container .sidebar div.profile .profile-image img {
 	width: 100%;
+	border-radius: 100px;
+	box-shadow: 1px 1px 8px #7f7f7f;
 }
 
 .container .sidebar div.profile .profile-name {
@@ -87,10 +54,6 @@ body {
 	height: 25px;
 	margin: 0 4px;
 	cursor: pointer;
-}
-
-.container .sidebar div.profile .profile-link a:hover {
-	filter: opacity(0.6);
 }
 
 .container .menu {

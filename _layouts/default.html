@@ -11,7 +11,9 @@
 		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/main.css">
 		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/post.css">
 	{% elsif site.settings.menu.type == "left" %}
+		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/base.css">
 		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/menu.css">
+		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/page.css">
 	{% endif %}
 
 	<!-- Google tag (gtag.js) -->
@@ -20,7 +22,6 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
-
 		gtag('config', 'G-XTWB4EY6BC');
 	</script>
 </head>
@@ -32,8 +33,10 @@
 	{% elsif site.settings.menu.type == "left" %}
 		<div class="container">
 			{% include menu-left.html %}
-			{{ content }}
-			{% include footer.html %}
+			<div class="page">
+				{{ content }}
+				{% include footer.html %}
+			</div>
 		</div>
 		<script src="{{ site.settings.url.js | relative_url }}/menu.js"></script>
 	{% endif %}
