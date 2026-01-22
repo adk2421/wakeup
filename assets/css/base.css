@@ -55,3 +55,35 @@ body {
 .container .page {
 	width: 100%;
 }
+
+.wrapper {
+	max-width: -webkit-calc(100%);
+	max-width: calc(100%);
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		flex-direction: column;
+		max-width: 100%;
+		max-width: 100%;
+	}
+
+	.container .sidebar {
+		width: 100% !important;
+		min-width: 100% !important;
+	}
+
+	.container .page .content {
+		padding: 30px !important;
+		justify-content: center;
+	}
+
+	.container .page .content .menu-title {
+		text-align: center;
+	}
+
+	.container .page .content .post {
+		justify-content: center;
+	}
+
+}
