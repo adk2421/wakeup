@@ -13,6 +13,16 @@
 	{% elsif site.settings.menu.type == "left" %}
 		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/menu.css">
 	{% endif %}
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XTWB4EY6BC"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-XTWB4EY6BC');
+	</script>
 </head>
 <body>
 	{% if site.settings.menu.type == "top" %}
