@@ -1,10 +1,17 @@
 <aside class="sidebar">
+	<div class="hits">
+		<a href="https://myhits.vercel.app"><img src="https://myhits.vercel.app/api/hit/https%3A%2F%2Fadk2421.github.io%2Fwakeup%2F?color=blue&amp;label=hits&amp;size=small" alt="hits"></a>
+	</div>
 	<div class="profile">
 		<div class="profile-image">
-			<img src="{{ site.settings.url.img | relative_url }}/profile-image.png">
+			<a href="{{ site.baseurl }}">
+				<img src="{{ site.settings.url.img | relative_url }}/profile-image.png">
+			</a>
 		</div>
 		<div class="profile-name">
-			<p>{{ site.personal.profile.name }}</p>
+			<a href="{{ site.baseurl }}">
+				<p>{{ site.personal.profile.name }}</p>
+			</a>
 		</div>
 		<div class="profile-link">
 			<a href="{{ site.personal.link.github }}">
@@ -27,32 +34,17 @@
 				<h3>ALL</h3>
 			</div>
 		</div>
-		<div class="menu-box">
-			<div class="menu-subject">
-				<h3>CSS</h3>
+		{% for menu in site.data.menu %}
+			<div class="menu-box">
+				<div class="menu-subject">
+					<h3>{{ menu.name }}</h3>
+				</div>
+				<div class="menu-item-box">
+					{% for subMenu in menu.subMenu %}
+						<div class="menu-item">{{ subMenu.name }}</div>
+					{% endfor %}
+				</div>
 			</div>
-			<div class="menu-item-box">
-				<div class="menu-item">layout</div>
-				<div class="menu-item">button</div>
-				<div class="menu-item">input</div>
-				<div class="menu-item">버튼</div>
-			</div>
-		</div>
-		<div class="menu-box">
-			<div class="menu-subject">
-				<h3>가나다라마바사아자차카타파하</h3>
-			</div>
-			<div class="menu-item-box">
-				<div class="menu-item">button</div>
-			</div>
-		</div>
-		<div class="menu-box">
-			<div class="menu-subject">
-				<h3>ABCDEFGHIJKLMNOPQRSTUVWXYZ</h3>
-			</div>
-			<div class="menu-item-box">
-				<div class="menu-item">button</div>
-			</div>
-		</div>
+		{% endfor %}
 	</div>
 </aside>

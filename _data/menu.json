@@ -1,0 +1,41 @@
+[
+	{
+		"name": "HTML",
+		"subMenu": [
+			{
+				"name": "Tag"
+			},
+			{
+				"name": "Attribute"
+			}
+		]
+	},
+	{
+		"name": "CSS",
+		"subMenu": [
+			{
+				"name": "Table"
+			},
+			{
+				"name": "Button"
+			},
+			{
+				"name": "Input"
+			}
+		]
+	},
+	{
+		"name": "JAVASCRIPT",
+		"subMenu": [
+			{
+				"name": "DataType"
+			},
+			{
+				"name": "Object"
+			},
+			{
+				"name": "Function"
+			}
+		]
+	}
+]
