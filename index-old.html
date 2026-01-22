@@ -1,0 +1,23 @@
+---
+layout: default
+title: Home
+---
+
+<main class="page-content" aria-label="Content">
+	<div class="wrapper">
+		<div class="home">
+			<h2 class="post-list-heading">Posts</h2>
+			<div class="post-list">
+				{% for post in site.posts %}
+					<a class="post-link" href="{{ post.url | relative_url }}">
+						<div class="post-card">
+							<h3 class="post-title">{{ post.title }}</h3>
+							<div class="post-short-content">{{ post.content | strip_html | truncate: 120 }}</div>
+							<div class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</div>
+						</div>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</main>
