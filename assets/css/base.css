@@ -13,7 +13,7 @@
 
 	--bg-color: #fdfdfd;
 	--bg-middle-color: #f2f2f2;
-	--bg-dark-color: #c3c3c3;
+	--bg-dark-color: #e4e4e4;
 
 	--primary-border: #d6d6d6;
 	--secondary-border: #dfdfdf;
@@ -52,25 +52,35 @@ body {
 	display: flex;
 }
 
+.container .menu-bar {
+	background-color: var(--bg-color);
+	border-right: 1px solid var(--primary-border);
+	user-select: none;
+}
+
 .container .page {
 	width: 100%;
+	background-color: var(--bg-color);
 }
 
-.wrapper {
-	max-width: -webkit-calc(100%);
-	max-width: calc(100%);
+/* Tablet Screen */
+@media screen and (max-width: 1023px) {
+
 }
 
-@media screen and (max-width: 600px) {
+/* Mobile Screen */
+@media screen and (max-width: 767px) {
 	.container {
 		flex-direction: column;
-		max-width: 100%;
-		max-width: 100%;
+		min-width: 100%;
 	}
 
-	.container .sidebar {
-		width: 100% !important;
-		min-width: 100% !important;
+	.container .side-bar {
+		display: none;
+	}
+
+	.container .top-bar {
+		display: block !important;
 	}
 
 	.container .page .content {
@@ -85,5 +95,4 @@ body {
 	.container .page .content .post {
 		justify-content: center;
 	}
-
 }
