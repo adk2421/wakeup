@@ -1,21 +1,27 @@
 
 // Click event
-document.addEventListener("click", (e) => {
+document.querySelector(".menu-bar").addEventListener("click", (e) => {
 	const el = e.target;
 
-	// 'menu-all'
+	// [menu-icon]
+	if (el.closest(".menu-icon")) {
+		const clickMenuIcon = el.closest(".menu-icon");
+		menuClickEvent.menuIcon(clickMenuIcon);
+	}
+
+	// [menu-all]
 	if (el.closest(".menu-all")) {
 		const clickMenuAll = el.closest(".menu-all");
 		menuClickEvent.menuAll(clickMenuAll);
 	}
 
-	// 'menu-subject'
+	// [menu-subject]
 	if (el.closest(".menu-subject")) {
 		const clickMenuSubject = el.closest(".menu-subject");
 		menuClickEvent.menuSubject(clickMenuSubject);
 	}
 
-	// 'menu-item'
+	// [menu-item]
 	if (el.closest(".menu-item")) {
 		const clickMenuItem = el.closest(".menu-item");
 		menuClickEvent.menuItem(clickMenuItem);
@@ -23,6 +29,22 @@ document.addEventListener("click", (e) => {
 });
 
 const menuClickEvent = {
+	menuIcon: (clickMenuIcon) => {
+		const topBarMenu = document.querySelector(".top-bar .menu");
+		const page = document.querySelector(".page");
+
+		if (!clickMenuIcon.classList.contains("active")) {
+			clickMenuIcon.classList.add("active");
+			topBarMenu.style.display = "block";
+			page.style.display = "none";
+
+		} else {
+			clickMenuIcon.classList.remove("active");
+			topBarMenu.style.display = "none";
+			page.style.display = "block";
+		}
+	},
+
 	menuAll: (clickMenuAll) => {
 		const menuItemList = document.querySelectorAll(".menu-item");
 		menuItemList.forEach((menuItem) => {

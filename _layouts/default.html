@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/base.css">
 		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/menu.css">
 		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/page.css">
+		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/post.css">
 	{% endif %}
 
 	<!-- Google tag (gtag.js) -->
@@ -32,7 +33,10 @@
 		{% include footer.html %}
 	{% elsif site.settings.menu.type == "left" %}
 		<div class="container">
-			{% include menu-left.html %}
+			<div class="menu-bar">
+				{% include menu-left.html %}
+				{% include menu-top.html %}
+			</div>
 			<div class="page">
 				{{ content }}
 				{% include footer.html %}
