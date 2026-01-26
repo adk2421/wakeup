@@ -6,16 +6,11 @@
 	{% seo %}
 
 	<link href="{{ site.settings.url.img | relative_url }}/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
-	<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/pretendardvariable.css">
-	{% if site.settings.menu.type == "top" %}
-		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/main.css">
-		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/post.css">
-	{% elsif site.settings.menu.type == "left" %}
-		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/base.css">
-		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/menu.css">
-		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/page.css">
-		<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/post.css">
-	{% endif %}
+	<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/font.css">
+	<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/base.css">
+	<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/menu.css">
+	<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/page.css">
+	<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/post.css">
 
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XTWB4EY6BC"></script>
@@ -27,22 +22,13 @@
 	</script>
 </head>
 <body>
-	{% if site.settings.menu.type == "top" %}
-		{% include menu-top.html %}
-		{{ content }}
-		{% include footer.html %}
-	{% elsif site.settings.menu.type == "left" %}
-		<div class="container">
-			<div class="menu-bar">
-				{% include menu-left.html %}
-				{% include menu-top.html %}
-			</div>
-			<div class="page">
-				{{ content }}
-				{% include footer.html %}
-			</div>
+	<div class="container">
+		{% include menu.html %}
+		<div class="page">
+			{{ content }}
+			{% include footer.html %}
 		</div>
-		<script src="{{ site.settings.url.js | relative_url }}/menu.js"></script>
-	{% endif %}
+	</div>
+	<script src="{{ site.settings.url.js | relative_url }}/menu.js"></script>
 </body>
 </html>

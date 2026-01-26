@@ -1,17 +1,14 @@
-<aside class="side-bar">
+<div class="menu-bar">
+	<!-- Web, Tablet Screen -->
 	<div class="hits">
-		<a href="https://myhits.vercel.app"><img src="https://myhits.vercel.app/api/hit/https%3A%2F%2Fadk2421.github.io%2Fwakeup%2F?color=blue&amp;label=hits&amp;size=small" alt="hits"></a>
+		<a href="https://myhits.vercel.app"><img src="https://myhits.vercel.app/api/hit/https%3A%2F%2Fadk2421.github.io%2Fwakeup%2F?color=gray&amp;label=hits&amp;size=small" alt="hits"></a>
 	</div>
 	<div class="profile">
-		<div class="profile-image">
-			<a href="{{ '/' | relative_url }}">
-				<img src="{{ site.settings.url.img | relative_url }}/profile-image.png">
-			</a>
+		<div class="profile-image link" data-link="{{ '/' | relative_url }}">
+			<img src="{{ site.settings.url.img | relative_url }}/profile-image.png">
 		</div>
-		<div class="profile-name">
-			<a href="{{ '/' | relative_url }}">
-				<p>{{ site.personal.profile.name }}</p>
-			</a>
+		<div class="profile-name link" data-link="{{ '/' | relative_url }}">
+			<p>{{ site.personal.profile.name }}</p>
 		</div>
 		<div class="profile-link">
 			<a href="{{ site.personal.link.github | relative_url }}">
@@ -28,9 +25,17 @@
 			</a>
 		</div>
 	</div>
+	<!-- Mobile Screen -->
+	<div class="nav">
+		<div class="site-title link" data-link="{{ '/' | relative_url }}">{{ site.title }}</div>
+		<div class="nav-icon">
+			<span class="menu-icon"></span>
+		</div>
+	</div>
+	<!-- Menu -->
 	<div class="menu">
 		<div class="menu-box">
-			<div class="menu-all">
+			<div class="menu-all link" data-link="{{ '/' | relative_url }}">
 				<h3>ALL</h3>
 			</div>
 		</div>
@@ -47,4 +52,4 @@
 			</div>
 		{% endfor %}
 	</div>
-</aside>
+</div>
