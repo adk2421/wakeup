@@ -41,33 +41,33 @@ const movePageEvent = {
 		
 
 		const url = clickLink.getAttribute("data-link");
-		history.pushState(null, '', url);
+		history.pushState(null, "", url);
 
 		fetch(url)
 			.then(response => response.text())
 			.then(html => {
 				const parser = new DOMParser();
-				const linkDoc = parser.parseFromString(html, 'text/html');
-				const linkContent = linkDoc.querySelector('.page').innerHTML;
+				const linkDoc = parser.parseFromString(html, "text/html");
+				const linkContent = linkDoc.querySelector(".page").innerHTML;
 
-				const page = document.querySelector('.page');
+				const page = document.querySelector(".page");
 				page.animate([
-					{ opacity: 1, transform: 'translateY(0)' },
-					{ opacity: 0, transform: 'translateY(-8px)' }
+					{ opacity: 1, transform: "translateY(0)" },
+					{ opacity: 0, transform: "translateY(-8px)" }
 				], { duration: 200 }).onfinish = () => {
 					page.innerHTML = linkContent;
 					page.animate([
-						{ opacity: 0, transform: 'translateY(-8px)' },
-						{ opacity: 1, transform: 'translateY(0)' }
+						{ opacity: 0, transform: "translateY(-8px)" },
+						{ opacity: 1, transform: "translateY(0)" }
 					], { duration: 300 });
 				};
 
 				window.scrollTo(0, 0);
 				document.title = linkDoc.title;
 			})
-			.catch(err => console.error('Error loading page:', err));
+			.catch(err => console.error("Error loading page:", err));
 
-		window.addEventListener('popstate', () => {
+		window.addEventListener("popstate", () => {
 			location.reload();
 		});
 	}
