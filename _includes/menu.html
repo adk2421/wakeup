@@ -5,7 +5,7 @@
 	</div>
 	<div class="profile">
 		<div class="profile-image link" data-link="{{ '/' | relative_url }}">
-			<img src="{{ site.settings.url.img | relative_url }}/profile-image.png">
+			<img src="{{ site.settings.url.img | relative_url }}/profile/profile-image.png" alt="프로필사진">
 		</div>
 		<div class="profile-name link" data-link="{{ '/' | relative_url }}">
 			<p>{{ site.personal.profile.name }}</p>
@@ -46,7 +46,7 @@
 				</div>
 				<div class="menu-item-box">
 					{% for subMenu in menu.subMenu %}
-						<div class="menu-item">{{ subMenu.name }}</div>
+						<div class="menu-item link" data-link="{{ '/' | relative_url }}">{{ subMenu.name }}</div>
 					{% endfor %}
 				</div>
 			</div>

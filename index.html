@@ -9,7 +9,7 @@ title: Home
 		{% for post in site.posts %}
 			<div class="post-card link" data-link="{{ post.url | relative_url }}">
 				<div class="post-thumbnail">
-					<img src="{{ site.settings.url.img | relative_url }}/cat.jpg">
+					<img src="{{ post.thumbnail | default: '/assets/images/post/post-thumbnail-default.png' | relative_url }}" alt="포스트썸네일">
 				</div>
 				<div class="post-info">
 					<h3 class="post-title">{{ post.title }}</h3>

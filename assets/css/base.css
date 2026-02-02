@@ -172,3 +172,13 @@ body {
 		transform: translateY(-8px);
 	}
 }
+
+/* Tag */
+ul {
+	margin-left: 30px;
+}
+
+ul li {
+	margin: 8px 0;
+	font-weight: 500;
+}
