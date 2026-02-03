@@ -41,7 +41,16 @@
 }
 
 .container .page .content .post .post-content p a:hover {
+	color: var(--secondary-color);
+}
+
+.container .page .content .post .post-content ul li a {
+	font-size: 20px;
 	font-weight: 800;
+	color: var(--primary-color);
+}
+
+.container .page .content .post .post-content ul li a:hover {
 	color: var(--secondary-color);
 }
 
@@ -51,34 +60,25 @@
 
 .post-content h1 {
 	font-size: 38px;
-	margin-bottom: 6px;
+	margin: 40px 0 6px 0;
 }
 
 .post-content h2 {
 	font-size: 32px;
-	margin-bottom: 6px;
+	margin: 40px 0 6px 0;
 }
 
 .post-content h3 {
 	font-size: 26px;
-	margin-bottom: 6px;
+	margin: 40px 0 6px 0;
 }
 
 .post-content h4 {
 	font-size: 20px;
 }
 
-code {
+figure, pre, code {
 	font-family: "RobotoMono Variable";
-}
-
-code.language-plaintext {
-	font-size: 14px;
-	font-weight: 400;
-	padding: 1px 6px;
-	border-radius: 4px;
-	color: var(--primary-light);
-	background-color: var(--tertiary-color);
 }
 
 figure {
@@ -93,10 +93,25 @@ figure pre {
 	overflow-x: auto;
 }
 
+figure pre.lineno {
+	padding-right: 12px;
+	margin-right: 15px;
+	border-right: 3px solid var(--secondary-border);
+}
+
 figure pre code {
 	font-size: 15px;
 	font-weight: 500;
 	letter-spacing: -0.5px;
+}
+
+code.language-plaintext {
+	font-size: 14px;
+	font-weight: 400;
+	padding: 1px 6px;
+	border-radius: 4px;
+	color: var(--primary-light);
+	background-color: var(--tertiary-color);
 }
 
 /**

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "CSS 버튼 템플릿"
+categories: css button
+title: CSS 버튼 템플릿
 author: 김지성
 date: 2026-01-26 10:45:40 +0900
-categories: jekyll update
-thumbnail: "/assets/images/post/post-thumbnail-css.png"
+thumbnail: /assets/images/post/post-thumbnail-css.png
 ---
 
 <style>
@@ -54,7 +54,7 @@ button { margin-right: 8px; padding: 10px 20px; cursor: pointer; }
 		<div class="code-box-content">
 
 <!-- Code // -->
-{% highlight css %}
+{% highlight css linenos %}
 .button_1 {
 	background-color: #2c6ca4;
 	color: #fdfdfd;

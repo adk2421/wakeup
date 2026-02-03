@@ -1,4 +1,3 @@
-
 // Click event
 document.addEventListener("click", (e) => {
 	const el = e.target;
@@ -38,8 +37,6 @@ document.addEventListener("click", (e) => {
 
 const movePageEvent = {
 	movePage: (clickLink) => {
-		
-
 		const url = clickLink.getAttribute("data-link");
 		history.pushState(null, "", url);
 
@@ -48,7 +45,35 @@ const movePageEvent = {
 			.then(html => {
 				const parser = new DOMParser();
 				const linkDoc = parser.parseFromString(html, "text/html");
-				const linkContent = linkDoc.querySelector(".page").innerHTML;
+				let linkContent = "";
+
+				if (clickLink.closest(".menu-item")) {
+					// const linkPage = linkDoc.querySelector(".page");
+					// linkPage.querySelector(".menu-title").innerText = clickLink.innerText;
+
+					// const subject = clickLink.closest(".menu-box").querySelector(".subject").innerText.toLowerCase();
+					// const menuItem = clickLink.innerText.toLowerCase();
+					// const menuNode = [subject, menuItem];
+
+					// posts.forEach((post) => {
+					// 	if (menuNode === post.categories) {
+					// 		console.log(post);
+					// 	}
+					// });
+					// const linkPost = linkDoc.querySelector(".post");
+					
+					// const linkPostCard = linkDoc.querySelector(".post-card").cloneNode(true);
+					// linkPostCard.querySelector(".post-title").innerText = "포스트";
+
+					// console.log(linkPostCard);
+
+					// linkContent = linkPage.innerHTML;
+
+					linkContent = linkDoc.querySelector(".page").innerHTML;
+
+				} else {
+					linkContent = linkDoc.querySelector(".page").innerHTML;
+				}
 
 				const page = document.querySelector(".page");
 				page.animate([
@@ -66,10 +91,6 @@ const movePageEvent = {
 				document.title = linkDoc.title;
 			})
 			.catch(err => console.error("Error loading page:", err));
-
-		window.addEventListener("popstate", () => {
-			location.reload();
-		});
 	}
 }
 

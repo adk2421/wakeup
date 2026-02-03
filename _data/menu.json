@@ -1,40 +1,61 @@
 [
 	{
-		"name": "HTML",
+		"title": "HTML",
+		"url": "/html/",
 		"subMenu": [
 			{
-				"name": "Tag"
+				"title": "Tag",
+				"url": "/html/tag/"
 			},
 			{
-				"name": "Attribute"
+				"title": "Attribute",
+				"url": "/html/attribute/"
 			}
 		]
 	},
 	{
-		"name": "CSS",
+		"title": "CSS",
+		"url": "/css/",
 		"subMenu": [
 			{
-				"name": "Table"
+				"title": "Table",
+				"url": "/css/table/"
 			},
 			{
-				"name": "Button"
+				"title": "Button",
+				"url": "/css/button/"
 			},
 			{
-				"name": "Input"
+				"title": "Input",
+				"url": "/css/input/"
 			}
 		]
 	},
 	{
-		"name": "JAVASCRIPT",
+		"title": "JAVASCRIPT",
+		"url": "/javascript/",
 		"subMenu": [
 			{
-				"name": "DataType"
+				"title": "DataType",
+				"url": "/javascript/datatype"
 			},
 			{
-				"name": "Object"
+				"title": "Object",
+				"url": "/javascript/object"
 			},
 			{
-				"name": "Function"
+				"title": "Function",
+				"url": "/javascript/function"
+			}
+		]
+	},
+	{
+		"title": "test",
+		"url": "/test/",
+		"subMenu": [
+			{
+				"title": "TestPage",
+				"url": "/test/testpage/"
 			}
 		]
 	}

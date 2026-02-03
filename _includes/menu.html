@@ -42,14 +42,15 @@
 		{% for menu in site.data.menu %}
 			<div class="menu-box">
 				<div class="menu-subject">
-					<h3>{{ menu.name }}</h3>
+					<h3 class="subject">{{ menu.title }}</h3>
 				</div>
 				<div class="menu-item-box">
 					{% for subMenu in menu.subMenu %}
-						<div class="menu-item link" data-link="{{ '/' | relative_url }}">{{ subMenu.name }}</div>
+						<div class="menu-item link" data-link="{{ menu.url | relative_url }}">{{ subMenu.title }}</div>
 					{% endfor %}
 				</div>
 			</div>
 		{% endfor %}
 	</div>
 </div>
+<script src="{{ site.settings.url.js | relative_url }}/menu.js"></script>
