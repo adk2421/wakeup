@@ -1,40 +1,83 @@
----
-layout: none
----
+/**
+ * =================================================================
+ * [ base.js ]
+ * : 기본 스크립트
+ * 
+ * @author adk2421
+ * @since 2026-02-02
+ * =================================================================
+ */
 
-let posts = [];
+// 페이지 로드 후 최초 실행
+window.onload = () => {
+	customEvent.init();
+	codeFormatter.tab();
+};
 
-async function initPosts() {
-	try {
-		const response = await fetch("{{ '/assets/data/post.json' | relative_url }}");
-		if (!response.ok) throw new Error("네트워크 응답에 문제가 있습니다.");
+/**
+ * [ customEvent ]
+ * : 커스텀 이벤트
+ * 
+ * @author adk2421
+ * @since 2026-02-02
+ */
+const customEvent = {
+	/**
+	 * [ customEvent.init ]
+	 * : 이벤트 초기화
+	 */
+	init: () => {
+		customEvent.popstate();
+	},
 
-		posts = await response.json();
-
-		console.log("데이터 로드 완료:", posts);
-
-	} catch (error) {
-		console.error("데이터를 가져오는 중 오류 발생:", error);
+	/**
+	 * [ customEvent.popstate ]
+	 * : 뒤로가기 이벤트
+	 */
+	popstate: () => {
+		window.addEventListener("popstate", () => {
+			location.reload();
+		});
 	}
 }
-initPosts();
 
-// 뒤로가기 시, 화면 로드
-window.addEventListener("popstate", () => {
-	localStorage.setItem("backEvent", true);
-	location.reload();
-});
-// 새로고침 시, 화면 유지
-window.addEventListener("beforeunload", (e) => {
-	localStorage.setItem("beforeunload_body", document.body.innerHTML);
-});
-window.onload = () => {
-	if (localStorage.getItem("backEvent")) {
-		localStorage.removeItem("backEvent");
-		location.reload();
+/**
+ * [ codeFormatter ]
+ * : 코드 포매터
+ * 
+ * @author adk2421
+ * @since 2026-02-02
+ */
+const codeFormatter = {
+	/**
+	 * [ codeFormatter.tab ]
+	 * : 탭 포매터
+	 */
+	tab: () => {
+		const codeList = document.querySelectorAll("code");
 
-	} else if (localStorage.getItem("beforeunload_body")) {
-		document.body.innerHTML = localStorage.getItem("beforeunload_body");
-		localStorage.removeItem("beforeunload_body");
+		if (codeList) {
+			codeList.forEach((code) => {
+				const codePre = code.querySelector(".lineno") ? code.querySelector("td.code pre") : code.closest("pre");
+				const replaceHtml = code.querySelector(".lineno") ? codePre : code;
+
+				const prefixTabCnt = (codePre.textContent.split("\n")[0].match(/\t/g) || []).length;
+				replaceHtml.innerHTML = replaceHtml.innerHTML
+												.replace("\t".repeat(prefixTabCnt), "")
+												.replaceAll("\n" + "\t".repeat(prefixTabCnt), "\n")
+												.replace(/\n*\t*$/, "");
+
+				if (code.querySelector(".lineno")) {
+					const lineNoCnt = code.querySelector("td.code pre").innerHTML.split("\n").length + 1;
+					let lineNoText = "";
+
+					for (let i = 1; i < lineNoCnt; i++) {
+						lineNoText += i + "\n";
+					}
+
+					code.querySelector(".lineno").innerHTML = lineNoText;
+				}
+			});
+		}
 	}
-};
+}
