@@ -30,13 +30,32 @@
 	box-shadow: 1px 1px 8px #7f7f7f;
 }
 
-.container .menu-bar div.profile .profile-name {
-	margin-bottom: 20px;
+.container .menu-bar div.profile .site-title {
+	margin-bottom: 2px;
 	text-align: center;
 }
 
+.container .menu-bar div.profile .site-title p {
+	font-size: 26px;
+	font-weight: 600;
+}
+
+.container .menu-bar div.profile .profile-name {
+	display: flex;
+    justify-content: center;
+	margin-bottom: 20px;
+	text-align: center;
+	color: var(--text-middle-color);
+}
+
+.container .menu-bar div.profile .profile-name img {
+	width: 16px;
+	height: 16px;
+	margin-right: 4px;
+}
+
 .container .menu-bar div.profile .profile-name p {
-	font-size: 22px;
+	font-size: 14px;
 	font-weight: 500;
 }
 

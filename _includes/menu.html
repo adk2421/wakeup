@@ -4,7 +4,11 @@
 		<div class="profile-image home">
 			<img src="{{ site.settings.url.img | relative_url }}/profile/profile-image.png" alt="프로필사진">
 		</div>
-		<div class="profile-name home">
+		<div class="site-title home">
+			<p>{{ site.title }}</p>
+		</div>
+		<div class="profile-name">
+			<img src="{{ site.settings.url.img | relative_url }}/profile/profile-image-default.png" alt="프로필사진">
 			<p>{{ site.personal.profile.name }}</p>
 		</div>
 		<div class="profile-link">
