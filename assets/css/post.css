@@ -1,5 +1,12 @@
 .container .page .content .post {}
 
+.container .page .content .post .empty-post {
+	width: 100%;
+	padding: 10vh 0;
+    text-align: center;
+	font-size: 24px;
+}
+
 .container .page .content .post .post-header {
 	margin-bottom: 40px;
 }
@@ -75,6 +82,7 @@
 
 .post-content h4 {
 	font-size: 20px;
+	margin: 40px 0 6px 0;
 }
 
 figure, pre, code {
@@ -91,6 +99,7 @@ figure {
 figure pre {
 	white-space: pre-wrap;
 	overflow-x: auto;
+	tab-size: 4;
 }
 
 figure pre.lineno {
@@ -119,6 +128,7 @@ code.language-plaintext {
  */
 .highlight {
 	background: #fff;
+	margin: 10px 0;
 }
 
 .highlighter-rouge .highlight {
@@ -379,10 +389,10 @@ code.language-plaintext {
 
 .view-code-box {
 	display: flex;
+	margin: 10px 0;
 }
 
 .view-code-box > div {
-	margin-bottom: 20px;
 	border: 1px solid var(--tertiary-border);
 }
 
@@ -392,6 +402,7 @@ code.language-plaintext {
 	padding: 8px 14px;
 	background-color: #efefef;
 	border-bottom: 1px solid var(--secondary-border);
+	border-radius: 4px 4px 0 0;
 	text-align: left;
 }
 

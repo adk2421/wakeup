@@ -9,11 +9,13 @@
 	border-bottom: 1px solid var(--primary-border);
 }
 
+.container .menu-bar div.profile .home,
 .container .menu-bar div.profile .link {
 	text-decoration: none;
 	color: var(--text-color);
 }
 
+.container .menu-bar div.profile .home:hover,
 .container .menu-bar div.profile .link:hover {
 	filter: opacity(0.6);
 }

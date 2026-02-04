@@ -1,9 +1,14 @@
 .container .page .content {
+	height: 100%;
 	padding: 60px 80px;
 	background-color: #fbfbfb;
 }
 
-.container .page .content .menu-title {
+.container .page .content .index {
+	height: 100%;
+}
+
+.container .page .content .index .menu-title {
 	margin-bottom: 20px;
 	font-size: 32px;
 }
@@ -11,6 +16,7 @@
 .container .page .content .index .post {
 	display: flex;
 	flex-wrap: wrap;
+	align-content: center;
 }
 
 .container .page .content .index .post a {
@@ -20,7 +26,7 @@
 
 .container .page .content .index .post .post-card {
 	width: 280px;
-	height: 360px;
+	height: 370px;
 	padding: 35px;
 	margin: 20px;
 	background-color: var(--white);
@@ -53,6 +59,16 @@
 
 .container .page .content .index .post .post-card .post-info {
 	padding: 20px 0px 5px 0px;
+}
+
+.container .page .content .index .post .post-card .post-category {
+    width: fit-content;
+    padding: 0px 8px;
+	margin: -4px 0 2px 0;
+    border-radius: 4px;
+    font-size: 13px;
+    background-color: #6995be;
+    color: #fdfdfd;
 }
 
 .container .page .content .index .post .post-card .post-info .post-title {
