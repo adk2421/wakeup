@@ -1,6 +1,15 @@
+/* menu.js */
+
 // Click event
 document.addEventListener("click", (e) => {
 	const el = e.target;
+
+	// [home]
+	if (el.closest(".home")) {
+		e.preventDefault(); // 페이지 새로고침 방지
+
+		movePageEvent.moveHome();
+	}
 
 	// [link]
 	if (el.closest(".link")) {
@@ -13,7 +22,7 @@ document.addEventListener("click", (e) => {
 	// [menu-icon]
 	if (el.closest(".menu-icon")) {
 		const clickMenuIcon = el.closest(".menu-icon");
-		clickMenuEvent.menuIcon(clickMenuIcon);
+		clickMenuEvent.toggleMenuIcon(clickMenuIcon);
 	}
 
 	// [menu-all]
@@ -36,6 +45,11 @@ document.addEventListener("click", (e) => {
 });
 
 const movePageEvent = {
+	moveHome: () => {
+		const menuAll = document.querySelector(".menu-all");
+		menuAll.click();
+	},
+
 	movePage: (clickLink) => {
 		const url = clickLink.getAttribute("data-link");
 		history.pushState(null, "", url);
@@ -45,42 +59,15 @@ const movePageEvent = {
 			.then(html => {
 				const parser = new DOMParser();
 				const linkDoc = parser.parseFromString(html, "text/html");
-				let linkContent = "";
+				const linkContent = linkDoc.querySelector(".content").innerHTML;
 
-				if (clickLink.closest(".menu-item")) {
-					// const linkPage = linkDoc.querySelector(".page");
-					// linkPage.querySelector(".menu-title").innerText = clickLink.innerText;
-
-					// const subject = clickLink.closest(".menu-box").querySelector(".subject").innerText.toLowerCase();
-					// const menuItem = clickLink.innerText.toLowerCase();
-					// const menuNode = [subject, menuItem];
-
-					// posts.forEach((post) => {
-					// 	if (menuNode === post.categories) {
-					// 		console.log(post);
-					// 	}
-					// });
-					// const linkPost = linkDoc.querySelector(".post");
-					
-					// const linkPostCard = linkDoc.querySelector(".post-card").cloneNode(true);
-					// linkPostCard.querySelector(".post-title").innerText = "포스트";
-
-					// console.log(linkPostCard);
-
-					// linkContent = linkPage.innerHTML;
-
-					linkContent = linkDoc.querySelector(".page").innerHTML;
-
-				} else {
-					linkContent = linkDoc.querySelector(".page").innerHTML;
-				}
-
-				const page = document.querySelector(".page");
+				const page = document.querySelector(".content");
 				page.animate([
 					{ opacity: 1, transform: "translateY(0)" },
 					{ opacity: 0, transform: "translateY(-8px)" }
 				], { duration: 200 }).onfinish = () => {
 					page.innerHTML = linkContent;
+					codeFormatter.tab();
 					page.animate([
 						{ opacity: 0, transform: "translateY(-8px)" },
 						{ opacity: 1, transform: "translateY(0)" }
@@ -95,7 +82,7 @@ const movePageEvent = {
 }
 
 const clickMenuEvent = {
-	menuIcon: (clickMenuIcon) => {
+	toggleMenuIcon: (clickMenuIcon) => {
 		const menu = document.querySelector(".menu-bar .menu");
 		const page = document.querySelector(".page");
 
@@ -107,7 +94,17 @@ const clickMenuEvent = {
 		} else {
 			clickMenuIcon.classList.remove("active");
 			menu.style.display = "none";
-			page.style.display = "block";
+			page.style.display = "flex";
+		}
+	},
+
+	closeMenuIcon: () => {
+		const nav = document.querySelector(".nav");
+
+		if (nav.offsetWidth || nav.offsetHeight || nav.getClientRects().length) {
+			document.querySelector(".menu-icon").classList.remove("active");
+			document.querySelector(".menu-bar .menu").style.display = "none";
+			document.querySelector(".page").style.display = "flex";
 		}
 	},
 
@@ -118,6 +115,7 @@ const clickMenuEvent = {
 		});
 
 		clickMenuAll.classList.add("active");
+		clickMenuEvent.closeMenuIcon();
 	},
 
 	menuSubject: (clickMenuSubject) => {
@@ -149,6 +147,7 @@ const clickMenuEvent = {
 		});
 
 		clickMenuItem.classList.add("active");
+		clickMenuEvent.closeMenuIcon();
 	},
 }
 

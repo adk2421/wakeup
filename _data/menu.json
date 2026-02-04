@@ -1,61 +1,21 @@
 [
 	{
-		"title": "HTML",
-		"url": "/html/",
+		"title": "TEMPLATE",
+		"url": "/TEMPLATE/",
 		"subMenu": [
 			{
-				"title": "Tag",
-				"url": "/html/tag/"
-			},
-			{
-				"title": "Attribute",
-				"url": "/html/attribute/"
+				"title": "CSS",
+				"url": "/TEMPLATE/CSS/"
 			}
 		]
 	},
 	{
-		"title": "CSS",
-		"url": "/css/",
-		"subMenu": [
-			{
-				"title": "Table",
-				"url": "/css/table/"
-			},
-			{
-				"title": "Button",
-				"url": "/css/button/"
-			},
-			{
-				"title": "Input",
-				"url": "/css/input/"
-			}
-		]
-	},
-	{
-		"title": "JAVASCRIPT",
-		"url": "/javascript/",
-		"subMenu": [
-			{
-				"title": "DataType",
-				"url": "/javascript/datatype"
-			},
-			{
-				"title": "Object",
-				"url": "/javascript/object"
-			},
-			{
-				"title": "Function",
-				"url": "/javascript/function"
-			}
-		]
-	},
-	{
-		"title": "test",
-		"url": "/test/",
+		"title": "ETC",
+		"url": "/ETC/",
 		"subMenu": [
 			{
 				"title": "TestPage",
-				"url": "/test/testpage/"
+				"url": "/ETC/TestPage/"
 			}
 		]
 	}

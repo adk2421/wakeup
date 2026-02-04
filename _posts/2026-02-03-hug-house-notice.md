@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: html tag
+categories: ETC TestPage
 title: HUG 든든전세주택 입주자 모집 공고 [2026.1.30]
 author: 김지성
 date: 2026-02-03 10:45:40 +0900
@@ -23,7 +23,7 @@ thumbnail: /assets/images/post/post-thumbnail-hug.png
 <div class="flow">
 	<div class="flow-box">
 		<div class="flow-title">
-			1. 공고확인
+			공고확인
 		</div>
 		<div class="flow-content">
 			<p class="bold">신청인</p>
@@ -33,7 +33,7 @@ thumbnail: /assets/images/post/post-thumbnail-hug.png
 	<div class="flow-separator">&gt;</div>
 	<div class="flow-box">
 		<div class="flow-title">
-			2. 입주신청
+			입주신청
 		</div>
 		<div class="flow-content">
 			<p class="bold">신청인 → 공사</p>
@@ -43,7 +43,7 @@ thumbnail: /assets/images/post/post-thumbnail-hug.png
 	<div class="flow-separator">&gt;</div>
 	<div class="flow-box">
 		<div class="flow-title">
-			3. 서류제출 대상자 선발
+			서류제출 대상자 선발
 		</div>
 		<div class="flow-content">
 			<p class="bold">공사</p>
@@ -53,7 +53,7 @@ thumbnail: /assets/images/post/post-thumbnail-hug.png
 	<div class="flow-separator">&gt;</div>
 	<div class="flow-box">
 		<div class="flow-title">
-			4. 서류제출 대상자 발표
+			서류제출 대상자 발표
 		</div>
 		<div class="flow-content">
 			<p class="bold">공사 → 신청인</p>
@@ -63,7 +63,7 @@ thumbnail: /assets/images/post/post-thumbnail-hug.png
 	<div class="flow-separator">&gt;</div>
 	<div class="flow-box">
 		<div class="flow-title">
-			5. 서류제출
+			서류제출
 		</div>
 		<div class="flow-content">
 			<p class="bold">서류제출 대상자 → 공사</p>
@@ -72,7 +72,7 @@ thumbnail: /assets/images/post/post-thumbnail-hug.png
 	<div class="flow-separator">&gt;</div>
 	<div class="flow-box">
 		<div class="flow-title">
-			6. 자격 심사
+			자격 심사
 		</div>
 		<div class="flow-content">
 			<p class="bold">공사</p>
@@ -82,7 +82,7 @@ thumbnail: /assets/images/post/post-thumbnail-hug.png
 	<div class="flow-separator">&gt;</div>
 	<div class="flow-box">
 		<div class="flow-title">
-			7. 당첨자 발표
+			당첨자 발표
 		</div>
 		<div class="flow-content">
 			<p class="bold">공사 → 신청인</p>
@@ -98,12 +98,14 @@ thumbnail: /assets/images/post/post-thumbnail-hug.png
 <style>
 	.flow {
 		display: flex;
-		justify-content: center;
-		margin-top: 15px;
+		justify-content: space-between;
+		padding: 10px;
 		font-size: 16px;
+		overflow-x: auto;
 	}
 
 	.flow .flow-box {
+		flex-shrink: 0;
 		border: 1px solid #cfcfcf;
 		border-radius: 10px;
 		background-color: var(--white);
