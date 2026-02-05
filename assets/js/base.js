@@ -58,23 +58,27 @@ const codeFormatter = {
 
 		if (codeList) {
 			codeList.forEach((code) => {
-				const codePre = code.querySelector(".lineno") ? code.querySelector("td.code pre") : code.closest("pre");
-				const replaceHtml = code.querySelector(".lineno") ? codePre : code;
+				let targetCode = code.querySelector(".lineno") ? code.querySelector("td.code pre") : code;
+				let replaceCodeHtml = targetCode.innerHTML;
 
-				const prefixTabCnt = (codePre.textContent.split("\n")[0].match(/\t/g) || []).length;
-				replaceHtml.innerHTML = replaceHtml.innerHTML
-												.replace("\t".repeat(prefixTabCnt), "")
-												.replaceAll("\n" + "\t".repeat(prefixTabCnt), "\n")
-												.replace(/\n*\t*$/, "");
+				// 양 끝의 줄바꿈 및 탭 제거
+				replaceCodeHtml = replaceCodeHtml.replace(/^\s*\n/, "").replace(/\s+$/, "");
 
+				// 첫 줄을 기준으로 탭 개수 계산
+				const prefixTabCnt = (replaceCodeHtml.split("\n")[0].match(/\t/g) || []).length;
+
+				targetCode.innerHTML = replaceCodeHtml
+											.replace("\t".repeat(prefixTabCnt), "")					// 첫 줄 앞부분 탭 제거
+											.replaceAll("\n" + "\t".repeat(prefixTabCnt), "\n")		// 전체 앞부분 탭 제거
+
+				// 라인번호가 존재하는 경우, 라인번호 개수 조정
 				if (code.querySelector(".lineno")) {
 					const lineNoCnt = code.querySelector("td.code pre").innerHTML.split("\n").length + 1;
-					let lineNoText = "";
 
+					let lineNoText = "";
 					for (let i = 1; i < lineNoCnt; i++) {
 						lineNoText += i + "\n";
 					}
-
 					code.querySelector(".lineno").innerHTML = lineNoText;
 				}
 			});
