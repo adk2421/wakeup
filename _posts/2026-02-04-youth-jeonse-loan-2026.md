@@ -1,10 +1,10 @@
 ---
 layout: post
 categories: [ETC, TestPage]
-title: "청년 전세대출 비교"
+title: "2026 청년 전세대출 비교"
 author: 김지성
 date: 2026-02-04 17:30:00 +0900
-thumbnail: /assets/images/post/post-thumbnail-hug.png
+thumbnail: /page/etc/testPage/images/thumbnail-jeonse-loan.jpg
 ---
 
 <div class="box">
