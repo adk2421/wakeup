@@ -1,7 +1,7 @@
 ---
 layout: default
 title: ETC / TestPage
-permalink: /ETC/TestPage
+permalink: ETC/TestPage
 ---
 {% assign filtered_posts = site.posts | where_exp: "item", "item.categories contains 'ETC'" | where_exp: "item", "item.categories contains 'TestPage'" %}
 
