@@ -1,7 +1,7 @@
 ---
 layout: post
-categories: ETC TestPage
-title: 청년 전세대출 비교
+categories: [ETC, TestPage]
+title: "청년 전세대출 비교"
 author: 김지성
 date: 2026-02-04 17:30:00 +0900
 thumbnail: /assets/images/post/post-thumbnail-hug.png

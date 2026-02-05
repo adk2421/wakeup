@@ -1,7 +1,7 @@
 ---
 layout: post
-categories: TEMPLATE CSS
-title: CSS 버튼 템플릿
+categories: [TEMPLATE, CSS]
+title: "CSS 버튼 템플릿"
 author: 김지성
 date: 2026-01-26 10:45:40 +0900
 thumbnail: /assets/images/post/post-thumbnail-css.png
