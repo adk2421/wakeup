@@ -1,3 +1,7 @@
+/**
+ * Base styles
+ */
+ 
 :root {
 	--classic-blue: #0f4c81;
 	--white: #fff;
@@ -27,6 +31,8 @@
 	--primary-btn-hover-text: var(--secondary-light);
 
 	--primary-text-hover: #066cc5;
+
+	--marker-orange: #ffdc8c;
 }
 
 * {
