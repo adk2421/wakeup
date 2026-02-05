@@ -1,3 +1,7 @@
+/**
+ * Post styles
+ */
+
 .container .page .content .post {}
 
 .container .page .content .post .empty-post {
@@ -30,7 +34,7 @@
 }
 
 .container .page .content .post .post-content {
-	font-size: 18px;
+	
 }
 
 .container .page .content .post .post-content p {
@@ -52,7 +56,6 @@
 }
 
 .container .page .content .post .post-content ul li a {
-	font-size: 20px;
 	font-weight: 800;
 	color: var(--primary-color);
 }
@@ -85,36 +88,44 @@
 	margin: 40px 0 6px 0;
 }
 
-figure, pre, code {
+.post-content figure, pre, code {
 	font-family: "RobotoMono Variable";
 }
 
-figure {
+.post-content figure {
 	padding: 15px 25px;
 	margin-bottom: 20px;
 	border: 1px solid var(--tertiary-border);
 	border-radius: 4px;
 }
 
-figure pre {
+.post-content figure pre {
+	display: flex;
 	white-space: pre-wrap;
 	overflow-x: auto;
 	tab-size: 4;
 }
 
-figure pre.lineno {
+.post-content figure pre.lineno {
 	padding-right: 12px;
 	margin-right: 15px;
 	border-right: 3px solid var(--secondary-border);
+	user-select: none;
 }
 
-figure pre code {
+.post-content figure pre code {
+	flex-shrink: 0;
 	font-size: 15px;
 	font-weight: 500;
 	letter-spacing: -0.5px;
 }
 
-code.language-plaintext {
+.post-content figure pre code .rouge-table td.code pre {
+	display: block;
+	flex-shrink: 0;
+}
+
+.post-content code.language-plaintext {
 	font-size: 14px;
 	font-weight: 400;
 	padding: 1px 6px;
@@ -123,290 +134,49 @@ code.language-plaintext {
 	background-color: var(--tertiary-color);
 }
 
-/**
- * Syntax highlighting styles
- */
-.highlight {
-	background: #fff;
-	margin: 10px 0;
+/* font style */
+.fs-18 {
+	font-size: 18px;
 }
 
-.highlighter-rouge .highlight {
-	background: #eef;
+.fs-20 {
+	font-size: 20px;
 }
 
-.highlight .c {
-	color: #998;
-	font-style: italic;
+.primary-color {
+	color: var(--primary-color);
 }
 
-.highlight .err {
-	color: #a61717;
-	background-color: #e3d2d2;
+.bold {
+	font-weight: 800;
 }
 
-.highlight .k {
-	font-weight: bold;
+.marker {
+	padding: 2px 4px;
+	background-color: var(--marker-orange);
+	font-weight: 600;
 }
 
-.highlight .o {
-	font-weight: bold;
-}
-
-.highlight .cm {
-	color: #998;
-	font-style: italic;
-}
-
-.highlight .cp {
-	color: #999;
-	font-weight: bold;
-}
-
-.highlight .c1 {
-	color: #998;
-	font-style: italic;
-}
-
-.highlight .cs {
-	color: #999;
-	font-weight: bold;
-	font-style: italic;
-}
-
-.highlight .gd {
-	color: #000;
-	background-color: #fdd;
-}
-
-.highlight .gd .x {
-	color: #000;
-	background-color: #faa;
-}
-
-.highlight .ge {
-	font-style: italic;
-}
-
-.highlight .gr {
-	color: #a00;
-}
-
-.highlight .gh {
-	color: #999;
-}
-
-.highlight .gi {
-	color: #000;
-	background-color: #dfd;
-}
-
-.highlight .gi .x {
-	color: #000;
-	background-color: #afa;
-}
-
-.highlight .go {
-	color: #888;
-}
-
-.highlight .gp {
-	color: #555;
-}
-
-.highlight .gs {
-	font-weight: bold;
-}
-
-.highlight .gu {
-	color: #aaa;
-}
-
-.highlight .gt {
-	color: #a00;
-}
-
-.highlight .kc {
-	font-weight: bold;
-}
-
-.highlight .kd {
-	font-weight: bold;
-}
-
-.highlight .kp {
-	font-weight: bold;
-}
-
-.highlight .kr {
-	font-weight: bold;
-}
-
-.highlight .kt {
-	color: #458;
-	font-weight: bold;
-}
-
-.highlight .m {
-	color: #099;
-}
-
-.highlight .s {
-	color: #d14;
-}
-
-.highlight .na {
-	color: #008080;
-}
-
-.highlight .nb {
-	color: #0086B3;
-}
-
-.highlight .nc {
-	color: #458;
-	font-weight: bold;
-}
-
-.highlight .no {
-	color: #008080;
-}
-
-.highlight .ni {
-	color: #800080;
-}
-
-.highlight .ne {
-	color: #900;
-	font-weight: bold;
-}
-
-.highlight .nf {
-	color: #900;
-	font-weight: bold;
-}
-
-.highlight .nn {
-	color: #555;
-}
-
-.highlight .nt {
-	color: #000080;
-}
-
-.highlight .nv {
-	color: #008080;
-}
-
-.highlight .ow {
-	font-weight: bold;
-}
-
-.highlight .w {
-	color: #bbb;
-}
-
-.highlight .mf {
-	color: #099;
-}
-
-.highlight .mh {
-	color: #099;
-}
-
-.highlight .mi {
-	color: #099;
-}
-
-.highlight .mo {
-	color: #099;
-}
-
-.highlight .sb {
-	color: #d14;
-}
-
-.highlight .sc {
-	color: #d14;
-}
-
-.highlight .sd {
-	color: #d14;
-}
-
-.highlight .s2 {
-	color: #d14;
-}
-
-.highlight .se {
-	color: #d14;
-}
-
-.highlight .sh {
-	color: #d14;
-}
-
-.highlight .si {
-	color: #d14;
-}
-
-.highlight .sx {
-	color: #d14;
-}
-
-.highlight .sr {
-	color: #009926;
-}
-
-.highlight .s1 {
-	color: #d14;
-}
-
-.highlight .ss {
-	color: #990073;
-}
-
-.highlight .bp {
-	color: #999;
-}
-
-.highlight .vc {
-	color: #008080;
-}
-
-.highlight .vg {
-	color: #008080;
-}
-
-.highlight .vi {
-	color: #008080;
-}
-
-.highlight .il {
-	color: #099;
-}
-
-
+/* view-code-box */
 .view-code-box {
 	display: flex;
 	margin: 10px 0;
-}
-
-.view-code-box > div {
 	border: 1px solid var(--tertiary-border);
+	border-radius: 4px;
 }
 
-.view-code-box > div > div.box-title {
+.view-code-box div div.box-title {
 	display: flex;
 	align-items: center;
 	padding: 8px 14px;
 	background-color: #efefef;
 	border-bottom: 1px solid var(--secondary-border);
-	border-radius: 4px 4px 0 0;
 	text-align: left;
+	font-weight: 500;
+	user-select: none;
 }
 
-.view-code-box > div > div.box-title::before {
+.view-code-box div div.box-title::before {
 	display: inline-block;
 	content: "";
 	width: 20px;
@@ -416,9 +186,17 @@ code.language-plaintext {
 	background-position: center;
 }
 
+.view-code-box div.view-box div.box-title {
+	border-radius: 4px 0 0 0;
+}
+
+.view-code-box div.code-box div.box-title {
+	border-radius: 0 4px 0 0;
+}
+
 .view-code-box .view-box {
 	width: 30%;
-	border-radius: 4px 0 0 4px;
+	border-right: 1px solid var(--tertiary-border);
 }
 
 .view-code-box .view-box .box-title::before {
@@ -427,8 +205,6 @@ code.language-plaintext {
 
 .view-code-box .code-box {
 	width: 70%;
-	border-left: none;
-	border-radius: 0 4px 4px 0;
 }
 
 .view-code-box .code-box .box-title::before {
@@ -438,4 +214,45 @@ code.language-plaintext {
 .view-code-box .code-box .code-box-content figure {
 	margin: 0;
 	border: none;
+}
+
+/* flow */
+.flow {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	font-size: 16px;
+	overflow-x: auto;
+}
+
+.flow .flow-box {
+	flex-shrink: 0;
+	border-radius: 10px;
+	background-color: var(--white);
+	box-shadow: 2px 2px 8px #b2b2b2;
+}
+
+.flow .flow-box .flow-title {
+	padding: 12px 20px;
+	border-radius: 10px 10px 0 0;
+	background-color: var(--primary-color);
+	color: var(--primary-light);
+	font-weight: 700;
+	text-align: center;
+}
+
+.flow .flow-box .flow-content {
+	padding: 12px 20px;
+	text-align: center;
+}
+
+.flow .flow-box .flow-content p {
+	margin: 0 !important;
+	line-height: 2;
+}
+
+.flow .flow-separator {
+	padding: 15px;
+	font-size: 20px;
+	align-content: center;
 }
