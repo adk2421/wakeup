@@ -4,15 +4,28 @@
 
 .container .page .content .post {}
 
-.container .page .content .post .empty-post {
-	width: 100%;
-	padding: 10vh 0;
-    text-align: center;
-	font-size: 24px;
+.container .page .content .post .post-breadcrumb {
+	display: flex;
+	align-items: center;
+}
+
+.container .page .content .post .post-breadcrumb span {
+	padding: 1px 6px;
+	font-size: 13px;
+}
+
+.container .page .content .post .post-breadcrumb span.link {
+	background-color: #6995be;
+	color: #fdfdfd;
+	border-radius: 4px;
+}
+
+.container .page .content .post .post-breadcrumb span.link:hover {
+	background-color: #436688;
 }
 
 .container .page .content .post .post-header {
-	margin-bottom: 40px;
+	
 }
 
 .container .page .content .post .post-header .post-title {
@@ -34,7 +47,7 @@
 }
 
 .container .page .content .post .post-content {
-	
+	overflow: auto;
 }
 
 .container .page .content .post .post-content p {
@@ -64,74 +77,80 @@
 	color: var(--secondary-color);
 }
 
-.post-content {
+.container .page .content .post .post-content {
 	margin-bottom: 30px;
 }
 
-.post-content h1 {
+.container .page .content .post .post-content h1 {
 	font-size: 38px;
 	margin: 40px 0 6px 0;
 }
 
-.post-content h2 {
+.container .page .content .post .post-content h2 {
 	font-size: 32px;
 	margin: 40px 0 6px 0;
 }
 
-.post-content h3 {
+.container .page .content .post .post-content h3 {
 	font-size: 26px;
 	margin: 40px 0 6px 0;
 }
 
-.post-content h4 {
+.container .page .content .post .post-content h4 {
 	font-size: 20px;
 	margin: 40px 0 6px 0;
 }
 
-.post-content figure, pre, code {
+.container .page .content .post .post-content figure, pre, code {
 	font-family: "RobotoMono Variable";
 }
 
-.post-content figure {
+.container .page .content .post .post-content figure {
 	padding: 15px 25px;
 	margin-bottom: 20px;
 	border: 1px solid var(--tertiary-border);
 	border-radius: 4px;
 }
 
-.post-content figure pre {
+.container .page .content .post .post-content figure pre {
 	display: flex;
 	white-space: pre-wrap;
 	overflow-x: auto;
 	tab-size: 4;
 }
 
-.post-content figure pre.lineno {
+.container .page .content .post .post-content figure pre.lineno {
 	padding-right: 12px;
 	margin-right: 15px;
 	border-right: 3px solid var(--secondary-border);
 	user-select: none;
 }
 
-.post-content figure pre code {
+.container .page .content .post .post-content figure pre code {
 	flex-shrink: 0;
 	font-size: 15px;
 	font-weight: 500;
 	letter-spacing: -0.5px;
 }
 
-.post-content figure pre code .rouge-table td.code pre {
+.container .page .content .post .post-content figure pre code .rouge-table td.code pre {
 	display: block;
 	flex-shrink: 0;
 }
 
-.post-content code.language-plaintext {
+.container .page .content .post .post-content code.language-plaintext {
 	font-size: 14px;
 	font-weight: 400;
 	padding: 1px 6px;
 	border-radius: 4px;
 	color: var(--primary-light);
 	background-color: var(--tertiary-color);
+}
+
+.container .page .content .post .post-content .item-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 /* font style */
