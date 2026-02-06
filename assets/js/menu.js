@@ -11,14 +11,6 @@ document.addEventListener("click", (e) => {
 		movePageEvent.moveHome();
 	}
 
-	// [link]
-	if (el.closest(".link")) {
-		e.preventDefault(); // 페이지 새로고침 방지
-		
-		const clickLink = el.closest(".link");
-		movePageEvent.movePage(clickLink);
-	}
-
 	// [menu-icon]
 	if (el.closest(".menu-icon")) {
 		const clickMenuIcon = el.closest(".menu-icon");
@@ -44,43 +36,7 @@ document.addEventListener("click", (e) => {
 	}
 });
 
-const movePageEvent = {
-	moveHome: () => {
-		const menuAll = document.querySelector(".menu-all");
-		menuAll.click();
-	},
-
-	movePage: (clickLink) => {
-		const url = clickLink.getAttribute("data-link");
-		history.pushState(null, "", url);
-
-		fetch(url)
-			.then(response => response.text())
-			.then(html => {
-				const parser = new DOMParser();
-				const linkDoc = parser.parseFromString(html, "text/html");
-				const linkContent = linkDoc.querySelector(".content").innerHTML;
-
-				const page = document.querySelector(".content");
-				page.animate([
-					{ opacity: 1, transform: "translateY(0)" },
-					{ opacity: 0, transform: "translateY(-8px)" }
-				], { duration: 200 }).onfinish = () => {
-					page.innerHTML = linkContent;
-					codeFormatter.tab();
-					page.animate([
-						{ opacity: 0, transform: "translateY(-8px)" },
-						{ opacity: 1, transform: "translateY(0)" }
-					], { duration: 300 });
-				};
-
-				window.scrollTo(0, 0);
-				document.title = linkDoc.title;
-			})
-			.catch(err => console.error("Error loading page:", err));
-	}
-}
-
+// Menu event
 const clickMenuEvent = {
 	toggleMenuIcon: (clickMenuIcon) => {
 		const menu = document.querySelector(".menu-bar .menu");

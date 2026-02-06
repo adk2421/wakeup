@@ -28,6 +28,7 @@ const customEvent = {
 	 */
 	init: () => {
 		customEvent.popstate();
+		customEvent.click();
 	},
 
 	/**
@@ -38,6 +39,80 @@ const customEvent = {
 		window.addEventListener("popstate", () => {
 			location.reload();
 		});
+	},
+
+	/**
+	 * [ customEvent.click ]
+	 * : 클릭 이벤트
+	 */
+	click: () => {
+		document.addEventListener("click", (e) => {
+			const el = e.target;
+
+			// 페이지 이동
+			if (el.closest(".link")) {
+				e.preventDefault(); // 페이지 새로고침 방지
+				
+				const clickLink = el.closest(".link");
+				movePageEvent.movePage(clickLink);
+
+			// 새 창 열기
+			} else if (el.closest(".blink")) {
+
+			}
+		});
+	}
+}
+
+/**
+ * [ movePageEvent ]
+ * : 페이지 이동 이벤트
+ * 
+ * @author adk2421
+ * @since 2026-02-02
+ */
+const movePageEvent = {
+	/**
+	 * [ movePageEvent.moveHome ]
+	 * : 홈 이동
+	 */
+	moveHome: () => {
+		const menuAll = document.querySelector(".menu-all");
+		menuAll.click();
+	},
+
+	/**
+	 * [ movePageEvent.movePage ]
+	 * : 페이지 이동
+	 */
+	movePage: (clickLink) => {
+		const url = clickLink.getAttribute("data-link");
+		history.pushState(null, "", url);
+
+		fetch(url)
+			.then(response => response.text())
+			.then(html => {
+				const parser = new DOMParser();
+				const linkDoc = parser.parseFromString(html, "text/html");
+				const linkContent = linkDoc.querySelector(".content").innerHTML;
+
+				const page = document.querySelector(".content");
+				page.animate([
+					{ opacity: 1, transform: "translateY(0)" },
+					{ opacity: 0, transform: "translateY(-8px)" }
+				], { duration: 200 }).onfinish = () => {
+					page.innerHTML = linkContent;
+					codeFormatter.tab();
+					page.animate([
+						{ opacity: 0, transform: "translateY(-8px)" },
+						{ opacity: 1, transform: "translateY(0)" }
+					], { duration: 300 });
+				};
+
+				window.scrollTo(0, 0);
+				document.title = linkDoc.title;
+			})
+			.catch(err => console.error("Error loading page:", err));
 	}
 }
 
