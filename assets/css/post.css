@@ -231,8 +231,8 @@
 }
 
 .view-code-box .code-box .code-box-content figure {
-	margin: 0;
-	border: none;
+	margin: 0 !important;
+	border: none !important;
 }
 
 /* flow */
