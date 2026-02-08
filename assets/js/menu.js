@@ -1,6 +1,39 @@
-/* menu.js */
+/**
+ * =================================================================
+ * [ menu.js ]
+ * : 메뉴 스크립트
+ * 
+ * @author adk2421
+ * @since 2026-01-21
+ * =================================================================
+ */
 
-// Click event
+// 메뉴 리사이즈 변수
+let timer = null;
+let beforeWidth = 0;
+
+// 메뉴 리사이즈 이벤트 추가
+window.addEventListener("resize", (e) => {
+	const el = e.target;
+
+	clearTimeout(timer);
+	timer = setTimeout(() => {
+		// 웹 사이즈 -> 모바일 사이즈
+		if (el.innerWidth < 768 && beforeWidth >= 768) {
+			document.querySelector(".menu-bar .menu").style.display = "none";
+			document.querySelector(".menu-bar .menu-icon").classList.remove("active");
+
+		// 모바일 사이즈 -> 웹 사이즈
+		} else if (el.innerWidth >= 768 && beforeWidth < 768) {
+			document.querySelector(".menu-bar .menu").style.display = "block";
+			document.querySelector(".page").style.display = "flex";
+		}
+
+		beforeWidth = innerWidth;
+	}, 100);
+});
+
+// 메뉴 클릭 이벤트 추가
 document.addEventListener("click", (e) => {
 	const el = e.target;
 
@@ -13,47 +46,61 @@ document.addEventListener("click", (e) => {
 
 	// [menu-icon]
 	if (el.closest(".menu-icon")) {
-		const clickMenuIcon = el.closest(".menu-icon");
-		clickMenuEvent.toggleMenuIcon(clickMenuIcon);
+		const menuIcon = el.closest(".menu-icon");
+		menuEvent.toggleMenuIcon(menuIcon);
 	}
 
 	// [menu-all]
 	if (el.closest(".menu-all")) {
-		const clickMenuAll = el.closest(".menu-all");
-		clickMenuEvent.menuAll(clickMenuAll);
+		const menuAll = el.closest(".menu-all");
+		menuEvent.clickMenuAll(menuAll);
 	}
 
 	// [menu-subject]
 	if (el.closest(".menu-subject")) {
-		const clickMenuSubject = el.closest(".menu-subject");
-		clickMenuEvent.menuSubject(clickMenuSubject);
+		const menuSubject = el.closest(".menu-subject");
+		menuEvent.clickMenuSubject(menuSubject);
 	}
 
 	// [menu-item]
 	if (el.closest(".menu-item")) {
-		const clickMenuItem = el.closest(".menu-item");
-		clickMenuEvent.menuItem(clickMenuItem);
+		const menuItem = el.closest(".menu-item");
+		menuEvent.clickMenuItem(menuItem);
 	}
 });
 
-// Menu event
-const clickMenuEvent = {
-	toggleMenuIcon: (clickMenuIcon) => {
+/**
+ * [ menuEvent ]
+ * : 메뉴 이벤트
+ * 
+ * @author adk2421
+ * @since 2026-01-21
+ */
+const menuEvent = {
+	/**
+	 * [ menuEvent.toggleMenuIcon ]
+	 * : 메뉴 아이콘 토글
+	 */
+	toggleMenuIcon: (menuIcon) => {
 		const menu = document.querySelector(".menu-bar .menu");
 		const page = document.querySelector(".page");
 
-		if (!clickMenuIcon.classList.contains("active")) {
-			clickMenuIcon.classList.add("active");
+		if (!menuIcon.classList.contains("active")) {
+			menuIcon.classList.add("active");
 			menu.style.display = "block";
 			page.style.display = "none";
 
 		} else {
-			clickMenuIcon.classList.remove("active");
+			menuIcon.classList.remove("active");
 			menu.style.display = "none";
 			page.style.display = "flex";
 		}
 	},
 
+	/**
+	 * [ menuEvent.closeMenuIcon ]
+	 * : 메뉴 아이콘 닫기
+	 */
 	closeMenuIcon: () => {
 		const nav = document.querySelector(".nav");
 
@@ -64,69 +111,57 @@ const clickMenuEvent = {
 		}
 	},
 
-	menuAll: (clickMenuAll) => {
+	/**
+	 * [ menuEvent.clickMenuAll ]
+	 * : All 메뉴 클릭
+	 */
+	clickMenuAll: (menuAll) => {
 		const menuItemList = document.querySelectorAll(".menu-item");
 		menuItemList.forEach((menuItem) => {
 			menuItem.classList.remove("active");
 		});
 
-		clickMenuAll.classList.add("active");
-		clickMenuEvent.closeMenuIcon();
+		menuAll.classList.add("active");
+		menuEvent.closeMenuIcon();
 	},
 
-	menuSubject: (clickMenuSubject) => {
-		const isActive = clickMenuSubject.classList.contains("active");
+	/**
+	 * [ menuEvent.clickMenuSubject ]
+	 * : 메뉴 주제 클릭
+	 */
+	clickMenuSubject: (menuSubject) => {
+		const isActive = menuSubject.classList.contains("active");
 
 		if (!isActive) {
-			clickMenuSubject.classList.add("active");
-			clickMenuSubject.nextElementSibling.classList.add("visible");
-			clickMenuSubject.nextElementSibling.classList.remove("invisible");
-			clickMenuSubject.nextElementSibling.style.display = "block";
+			menuSubject.classList.add("active");
+			menuSubject.nextElementSibling.classList.add("visible");
+			menuSubject.nextElementSibling.classList.remove("invisible");
+			menuSubject.nextElementSibling.style.display = "block";
 
 		} else {
-			clickMenuSubject.classList.remove("active");
-			clickMenuSubject.nextElementSibling.classList.remove("visible");
-			clickMenuSubject.nextElementSibling.classList.add("invisible");
+			menuSubject.classList.remove("active");
+			menuSubject.nextElementSibling.classList.remove("visible");
+			menuSubject.nextElementSibling.classList.add("invisible");
 			setTimeout(() => {
-				clickMenuSubject.nextElementSibling.style.display = "none";
+				menuSubject.nextElementSibling.style.display = "none";
 			}, 200);
 		}
 	},
 
-	menuItem: (clickMenuItem) => {
-		const clickMenuAll = document.querySelector(".menu-all");
-		clickMenuAll.classList.remove("active");
+	/**
+	 * [ menuEvent.clickMenuItem ]
+	 * : 메뉴 항목 클릭
+	 */
+	clickMenuItem: (menuItem) => {
+		const menuAll = document.querySelector(".menu-all");
+		menuAll.classList.remove("active");
 
 		const menuItemList = document.querySelectorAll(".menu-item");
-		menuItemList.forEach((menuItem) => {
-			menuItem.classList.remove("active");
+		menuItemList.forEach((menu) => {
+			menu.classList.remove("active");
 		});
 
-		clickMenuItem.classList.add("active");
-		clickMenuEvent.closeMenuIcon();
+		menuItem.classList.add("active");
+		menuEvent.closeMenuIcon();
 	},
 }
-
-let timer = null;
-let beforeWidth = 0;
-
-// Resize event
-window.addEventListener("resize", (e) => {
-	const el = e.target;
-
-	clearTimeout(timer);
-	timer = setTimeout(() => {
-		// Web -> Mobile
-		if (el.innerWidth < 768 && beforeWidth >= 768) {
-			document.querySelector(".menu-bar .menu").style.display = "none";
-			document.querySelector(".menu-bar .menu-icon").classList.remove("active");
-
-		// Mobile -> Web
-		} else if (el.innerWidth >= 768 && beforeWidth < 768) {
-			document.querySelector(".menu-bar .menu").style.display = "block";
-			document.querySelector(".page").style.display = "flex";
-		}
-
-		beforeWidth = innerWidth;
-	}, 100);
-});
