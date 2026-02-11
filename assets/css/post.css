@@ -14,12 +14,14 @@
 	font-size: 13px;
 }
 
+.container .page .content .post .post-breadcrumb span.home,
 .container .page .content .post .post-breadcrumb span.link {
 	background-color: #6995be;
 	color: #fdfdfd;
 	border-radius: 4px;
 }
 
+.container .page .content .post .post-breadcrumb span.home:hover,
 .container .page .content .post .post-breadcrumb span.link:hover {
 	background-color: #436688;
 }
