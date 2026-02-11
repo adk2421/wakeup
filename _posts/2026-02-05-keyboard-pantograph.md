@@ -4,7 +4,7 @@ categories: [TEMPLATE, CSS]
 title: "키보드 테스트"
 author: 김지성
 date: 2026-02-05 16:30:00 +0900
-thumbnail: /page/template/css/images/thumbnail-pantograph.jpg
+thumbnail: /page/template/menu/css/images/thumbnail-pantograph.jpg
 ---
 
 <style>
