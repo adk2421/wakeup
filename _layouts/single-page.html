@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% seo %}
+
+	<link href="{{ site.settings.url.img | relative_url }}/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+	<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/font.css">
+	<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/base.css">
+	<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/menu.css">
+	<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/page.css">
+	<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/post.css">
+	<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/highlight.css">
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XTWB4EY6BC"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-XTWB4EY6BC');
+	</script>
+</head>
+<body>
+	{{ content }}
+	<script src="{{ site.settings.url.js | relative_url }}/base.js"></script>
+</body>
+</html>

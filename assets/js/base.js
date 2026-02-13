@@ -57,8 +57,11 @@ const customEvent = {
 				movePageEvent.movePage(clickLink);
 
 			// 새 창 열기
-			} else if (el.closest(".blink")) {
+			} else if (el.closest(".blank")) {
+				e.preventDefault(); // 페이지 새로고침 방지
 
+				const clickLink = el.closest(".blank");
+				movePageEvent.moveSinglePage(clickLink);
 			}
 		});
 	}
@@ -113,7 +116,15 @@ const movePageEvent = {
 				document.title = linkDoc.title;
 			})
 			.catch(err => console.error("Error loading page:", err));
-	}
+	},
+	/**
+	 * [ movePageEvent.moveSinglePage ]
+	 * : 단일 페이지 이동
+	 */
+	moveSinglePage: (clickLink) => {
+		const url = clickLink.getAttribute("data-link");
+		location.href = url;
+	},
 }
 
 /**

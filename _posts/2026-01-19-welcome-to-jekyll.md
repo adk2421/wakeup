@@ -4,6 +4,7 @@ title: "Welcome to Jekyll!"
 author: 김지성
 date: 2026-01-19 10:45:40 +0900
 categories: jekyll update
+link-type: link
 ---
 
 <br/>

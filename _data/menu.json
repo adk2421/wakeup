@@ -14,8 +14,8 @@
 		"url": "/ERROR/",
 		"subMenu": [
 			{
-				"title": "WINDOWS",
-				"url": "/ERROR/WINDOWS/"
+				"title": "Windows",
+				"url": "/ERROR/Windows/"
 			}
 		]
 	},
@@ -24,8 +24,12 @@
 		"url": "/ETC/",
 		"subMenu": [
 			{
-				"title": "TestPage",
-				"url": "/ETC/TestPage/"
+				"title": "Util",
+				"url": "/ETC/Util/"
+			},
+			{
+				"title": "Test",
+				"url": "/ETC/Test/"
 			}
 		]
 	}

@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "ERROR / WINDOWS"
-permalink: ERROR/WINDOWS/
+title: "ERROR / Windows"
+permalink: ERROR/Windows/
 ---
-{% assign filtered_posts = site.posts | where_exp: "item", "item.categories contains 'ERROR'" | where_exp: "item", "item.categories contains 'WINDOWS'" %}
+{% assign filtered_posts = site.posts | where_exp: "item", "item.categories contains 'ERROR'" | where_exp: "item", "item.categories contains 'Windows'" %}
 
 <div class="index">
 	<h2 class="menu-title">{{ page.title }}</h2>
@@ -12,7 +12,7 @@ permalink: ERROR/WINDOWS/
 			<div class="empty-post">포스트 없음</div>
 		{% endif %}
 		{% for post in filtered_posts %}
-			<div class="post-card link" data-link="{{ post.url | relative_url }}">
+			<div class="post-card {{ post.link-type }}" data-link="{{ post.url | relative_url }}">
 				<div class="post-thumbnail">
 					<img src="{{ post.thumbnail | default: '/assets/images/post/post-thumbnail-default.png' | relative_url }}" alt="포스트썸네일">
 				</div>

@@ -101,7 +101,7 @@ body {
 	letter-spacing: -1px;
 }
 
-.home, .link {
+.home, .link, .blank {
 	cursor: pointer;
 }
 
