@@ -117,6 +117,7 @@ const movePageEvent = {
 			})
 			.catch(err => console.error("Error loading page:", err));
 	},
+
 	/**
 	 * [ movePageEvent.moveSinglePage ]
 	 * : 단일 페이지 이동
@@ -125,6 +126,14 @@ const movePageEvent = {
 		const url = clickLink.getAttribute("data-link");
 		location.href = url;
 	},
+
+	/**
+	 * [ movePageEvent.moveBack ]
+	 * : 이전 페이지 이동
+	 */
+	moveBack: () => {
+		history.back();
+	}
 }
 
 /**

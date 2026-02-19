@@ -134,3 +134,42 @@
     border-top: 3px solid #b8b8b8;
 	color: var(--text-middle-color);
 }
+
+/* Single Page */
+.single-page {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.single-page .center {
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+	width: 100%;
+}
+
+.single-page .nav {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+	margin: 0 20px;
+	background-color: var(--primary-btn-hover);
+}
+
+.single-page .nav .back {
+	align-content: center;
+	height: 100%;
+	padding: 0 30px;
+}
+
+.single-page .nav .back::after {
+	content: "";
+	display: block;
+	background-image: url("../images/icon/left-icon.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 25px;
+	height: 25px;
+}
