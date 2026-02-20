@@ -64,7 +64,7 @@ link-type: blank
 	padding: 15px;
 	margin: 20px;
 	background: linear-gradient(to right, #ececec, #fafafa, #ececec);
-	border: 1px solid #e9e9e9;
+	border: 1px solid #cdcdcd;
 	border-radius: 10px;
 	box-shadow: inset 0 0 12px #f3f3f3, 0 12px 0 #bbb, 4px 12px rgba(0, 0, 0, 0.2), -4px 12px rgba(0, 0, 0, 0.2);
 	overflow-x: auto;
@@ -150,9 +150,6 @@ link-type: blank
 </style>
 
 <div class="center">
-	<div class="nav">
-		<div class="back"></div>
-	</div>
 	<div class="monitor">
 		<div class="log">
 			<div>[ Keyboard Test ]</div>
