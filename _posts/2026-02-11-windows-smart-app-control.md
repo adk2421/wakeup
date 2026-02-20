@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: [ERROR, Windows]
+categories: [error, windows]
 title: "이 앱의 일부가 차단되었습니다."
 author: 김지성
 date: 2026-02-11 12:35:00 +0900

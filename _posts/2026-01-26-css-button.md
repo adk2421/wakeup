@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: [TEMPLATE, CSS]
+categories: [template, css]
 title: "CSS 버튼 템플릿"
 author: 김지성
 date: 2026-01-26 10:45:40 +0900
@@ -8,37 +8,8 @@ thumbnail: /page/template/menu/css/images/thumbnail-css.png
 link-type: link
 ---
 
-<script>
-	document.querySelector(".post-content").addEventListener("click", (e) => {
-		const el = e.target;
+<link rel="stylesheet" href="{{ "/page/template/menu/css/css/css-button.css" | relative_url }}">
 
-		if (el.type === "button") {
-			alert(el.innerText + " 클릭");
-		}
-	});
-</script>
-
-<style>
-button { padding: 10px 20px; cursor: pointer; }
-
-.button-box {
-	display: flex;
-	justify-content: center;
-	padding-top: 15px;
-}
-</style>
-
-<style>
-.button_1 {
-	background-color: #2c6ca4;
-	color: #fdfdfd;
-	border: none;
-	border-radius: 5px;
-}
-.button_1:hover {
-	background-color: #3686cc;
-}
-</style>
 #### 버튼 기본 스타일
 {% highlight css %}
 button { padding: 10px 20px; cursor: pointer; }
@@ -79,16 +50,6 @@ button { padding: 10px 20px; cursor: pointer; }
 	</div>
 </div>
 
-<style>
-.button_2 {
-	color: #333;
-	border: none;
-	box-shadow: 1px 1px 4px #333;
-}
-.button_2:active {
-	box-shadow: inset 1px 1px 4px #333;
-}
-</style>
 #### 버튼 2
 <div class="view-code-box">
 	<div class="view-box">

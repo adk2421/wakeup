@@ -1,35 +1,47 @@
 [
 	{
-		"title": "TEMPLATE",
-		"url": "/TEMPLATE/",
+		"title": "템플릿",
+		"name": "template",
+		"url": "/template/",
 		"subMenu": [
 			{
 				"title": "CSS",
-				"url": "/TEMPLATE/CSS/"
+				"name": "css",
+				"url": "/template/css/"
 			}
 		]
 	},
 	{
-		"title": "ERROR",
-		"url": "/ERROR/",
+		"title": "오류",
+		"name": "error",
+		"url": "/error/",
 		"subMenu": [
 			{
 				"title": "Windows",
-				"url": "/ERROR/Windows/"
+				"name": "windows",
+				"url": "/error/windows/"
 			}
 		]
 	},
 	{
 		"title": "ETC",
-		"url": "/ETC/",
+		"name": "etc",
+		"url": "/etc/",
 		"subMenu": [
 			{
-				"title": "Util",
-				"url": "/ETC/Util/"
+				"title": "유틸",
+				"name": "util",
+				"url": "/etc/util/"
 			},
 			{
-				"title": "Test",
-				"url": "/ETC/Test/"
+				"title": "정보",
+				"name": "info",
+				"url": "/etc/info/"
+			},
+			{
+				"title": "테스트",
+				"name": "test",
+				"url": "/etc/test/"
 			}
 		]
 	}

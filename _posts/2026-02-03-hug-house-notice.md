@@ -1,10 +1,10 @@
 ---
 layout: post
-categories: [ETC, Test]
+categories: [etc, info]
 title: "HUG 든든전세주택 입주자 모집 공고 [2026.1.30]"
 author: 김지성
 date: 2026-02-03 17:40:00 +0900
-thumbnail: /page/etc/menu/test/images/thumbnail-hug.png
+thumbnail: /page/etc/menu/info/images/thumbnail-hug.png
 link-type: link
 ---
 
