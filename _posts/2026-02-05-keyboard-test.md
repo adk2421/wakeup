@@ -4,7 +4,7 @@ categories: [etc, util]
 title: "키보드 테스트"
 author: 김지성
 date: 2026-02-05 16:30:00 +0900
-thumbnail: /page/etc/menu/util/images/thumbnail-keyboard.jpg
+thumbnail: /page/etc/menu/util/images/thumbnail-keyboard-test.jpg
 link-type: blank
 ---
 
@@ -44,6 +44,12 @@ link-type: blank
 			<div class="key" data-value="PrintScreen">PrtSc</div>
 			<div class="key" data-value="ScrollLock">ScrLk</div>
 			<div class="key" data-value="Pause">Pause</div>
+			<div class="mr-20"></div>
+			<div class="lcd">
+				<img src="{{ '/page/etc/menu/util/images/keyboard-test-lcd.gif' | relative_url }}">
+			</div>
+			<div class="mr-93"></div>
+			<div class="key knob"></div>
 		</div>
 		<div class="line">
 			<div class="key" data-value="Backquote">`</div>
@@ -64,8 +70,13 @@ link-type: blank
 			<div class="key" data-value="Insert">Ins</div>
 			<div class="key" data-value="Home">Home</div>
 			<div class="key" data-value="PageUp">PgUp</div>
+			<div class="mr-20"></div>
+			<div class="key" data-value="NumLock">Num Lock</div>
+			<div class="key" data-value="NumpadDivide">/</div>
+			<div class="key" data-value="NumpadMultiply">*</div>
+			<div class="key" data-value="NumpadSubtract">-</div>
 		</div>
-		<div class="line">
+		<div class="line key-mb-0">
 			<div class="key w-90" data-value="Tab">Tab</div>
 			<div class="key" data-value="KeyQ">Q</div>
 			<div class="key" data-value="KeyW">W</div>
@@ -84,8 +95,13 @@ link-type: blank
 			<div class="key" data-value="Delete">Del</div>
 			<div class="key" data-value="End">End</div>
 			<div class="key" data-value="PageDown">PgDn</div>
+			<div class="mr-20"></div>
+			<div class="key" data-value="Numpad7">7</div>
+			<div class="key" data-value="Numpad8">8</div>
+			<div class="key" data-value="Numpad9">9</div>
+			<div class="key merge merge-top" data-value="NumpadAdd">+</div>
 		</div>
-		<div class="line">
+		<div class="line key-mt-0">
 			<div class="key w-105" data-value="CapsLock">Caps Lock</div>
 			<div class="key" data-value="KeyA">A</div>
 			<div class="key" data-value="KeyS">S</div>
@@ -99,8 +115,13 @@ link-type: blank
 			<div class="key" data-value="Semicolon">;</div>
 			<div class="key" data-value="Quote">'</div>
 			<div class="key w-105" data-value="Enter">Enter</div>
+			<div class="mr-235"></div>
+			<div class="key" data-value="Numpad4">4</div>
+			<div class="key" data-value="Numpad5">5</div>
+			<div class="key" data-value="Numpad6">6</div>
+			<div class="key merge merge-bottom" data-value="NumpadAdd"></div>
 		</div>
-		<div class="line">
+		<div class="line key-mb-0">
 			<div class="key w-137" data-value="ShiftLeft">Shift</div>
 			<div class="key" data-value="KeyZ">Z</div>
 			<div class="key" data-value="KeyX">X</div>
@@ -115,8 +136,13 @@ link-type: blank
 			<div class="key w-137" data-value="ShiftRight">Shift</div>
 			<div class="mr-85"></div>
 			<div class="key" data-value="ArrowUp">↑</div>
+			<div class="mr-85"></div>
+			<div class="key" data-value="Numpad1">1</div>
+			<div class="key" data-value="Numpad2">2</div>
+			<div class="key" data-value="Numpad3">3</div>
+			<div class="key merge merge-top" data-value="NumpadEnter">Enter</div>
 		</div>
-		<div class="line">
+		<div class="line key-mt-0">
 			<div class="key w-80" data-value="ControlLeft">Ctrl</div>
 			<div class="key w-80" data-value="MetaLeft">Win</div>
 			<div class="key w-80" data-value="AltLeft">Alt</div>
@@ -128,6 +154,10 @@ link-type: blank
 			<div class="key" data-value="ArrowLeft">←</div>
 			<div class="key" data-value="ArrowDown">↓</div>
 			<div class="key" data-value="ArrowRight">→</div>
+			<div class="mr-20"></div>
+			<div class="key w-120" data-value="Numpad0">0</div>
+			<div class="key" data-value="NumpadDecimal">.</div>
+			<div class="key merge merge-bottom" data-value="NumpadEnter"></div>
 		</div>
 	</div>
 </div>

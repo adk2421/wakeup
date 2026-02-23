@@ -8,18 +8,31 @@ document.addEventListener("keydown", (e) => {
 	let keyCode = e.code;
 
 	// 오른쪽 Shift 키 처리
-	if (keyCode == "" && e.key == "Shift")
+	if (keyCode == "" && e.key == "Shift") {
 		keyCode = "ShiftRight";
-
-	const clickKey = document.querySelector("div[data-value=" + keyCode + "]");
-	if (clickKey) {
-		clickKey.classList.add("active", "check");
-		printLog(keyCode);
 	}
 
-	// 왼쪽 Windows 키 처리
-	if (keyCode == "MetaLeft")
-		clickKey.classList.remove("active");
+	const keys = document.querySelectorAll(".merge[data-value=" + keyCode);
+
+	// 병합키 처리
+	if (keys.length > 1) {
+		keys.forEach((key) => {
+			key.classList.add("active", "check");
+		});
+		printLog(keyCode);
+
+	// 일반키 처리
+	} else {
+		const key = document.querySelector("div[data-value=" + keyCode + "]");
+		if (key) {
+			key.classList.add("active", "check");
+			printLog(keyCode);
+		}
+
+		// 왼쪽 Windows 키 처리
+		if (keyCode == "MetaLeft")
+			key.classList.remove("active");
+	}
 });
 
 // Keyup 이벤트
@@ -27,16 +40,34 @@ document.addEventListener("keyup", (e) => {
 	let keyCode = e.code;
 
 	// 오른쪽 Shift 키 처리
-	if (keyCode == "" && e.key == "Shift")
+	if (keyCode == "" && e.key == "Shift") {
 		keyCode = "ShiftRight";
+	}
 
-	const clickKey = document.querySelector("div[data-value=" + keyCode + "]");
-	if (clickKey) clickKey.classList.remove("active");
+	const keys = document.querySelectorAll(".merge[data-value=" + keyCode);
 
-	// PrintScreen 키 처리
-	if (keyCode == "PrintScreen") {
-		clickKey.classList.add("check");
-		printLog(keyCode);
+	// 병합키 처리
+	if (keys.length > 1) {
+		keys.forEach((key) => {
+			key.classList.remove("active");
+		});
+
+	// 일반키 처리
+	} else {
+		// 오른쪽 Shift 키 처리
+		if (keyCode == "" && e.key == "Shift")
+			keyCode = "ShiftRight";
+
+		const key = document.querySelector("div[data-value=" + keyCode + "]");
+		if (key) {
+			key.classList.remove("active");
+		}
+
+		// PrintScreen 키 처리
+		if (keyCode == "PrintScreen") {
+			key.classList.add("check");
+			printLog(keyCode);
+		}
 	}
 });
 
