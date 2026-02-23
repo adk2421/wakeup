@@ -1,0 +1,239 @@
+@use "variables" as *;
+/**
+ * Menu styles
+ */
+ 
+.container {
+	.menu-bar {
+		// Web, Tablet Screen
+		div.hits {
+			padding: 12px 15px 0px 15px;
+			text-align: right;
+		}
+
+		div.profile {
+			padding: 40px 70px 25px 70px;
+			border-bottom: 1px solid $primary-border;
+
+			.home, .link {
+				text-decoration: none;
+				color: $text-color;
+
+				&:hover {
+					filter: opacity(0.6);
+				}
+			}
+
+			.profile-image {
+				margin-bottom: 5px;
+
+				img {
+					width: 100%;
+					border-radius: 250px;
+					box-shadow: 1px 1px 8px #7f7f7f;
+				}
+			}
+
+			.site-title {
+				margin-bottom: 2px;
+				text-align: center;
+
+				p {
+					font-size: 26px;
+					font-weight: 600;
+				}
+			}
+
+			.profile-name {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 20px;
+				text-align: center;
+				color: $text-middle-color;
+
+				img {
+					width: 16px;
+					height: 16px;
+					margin-right: 4px;
+				}
+
+				p {
+					font-size: 14px;
+					font-weight: 500;
+				}
+			}
+
+			.profile-link {
+				display: flex;
+				justify-content: center;
+
+				a {
+					width: 25px;
+					height: 25px;
+					margin: 0 4px;
+					cursor: pointer;
+
+					&:hover {
+						filter: opacity(0.6);
+					}
+				}
+			}
+		}
+
+		// Mobile Screen
+		.nav {
+			display: none;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+
+			.site-title {
+				width: 100%;
+				font-size: 26px;
+				font-weight: 700;
+				text-decoration: none;
+				color: $text-color;
+
+				&:hover {
+					filter: opacity(0.6);
+				}
+			}
+
+			.nav-icon {
+				display: flex;
+				justify-content: right;
+				width: 100%;
+
+				.menu-icon {
+					width: 16px;
+					height: 16px;
+					padding: 8px;
+					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' fill='%23333333' viewBox='0 0 256 256'%3E%3Cpath d='M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z'/%3E%3C/svg%3E");
+					background-size: contain;
+					background-repeat: no-repeat;
+					transition: 0.3s;
+					cursor: pointer;
+
+					&.active {
+						background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' fill='%23333333' viewBox='0 0 256 256'%3E%3Cpath d='M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z'/%3E%3C/svg%3E");
+					}
+
+					svg {
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+
+		// Menu
+		.menu {
+			height: 100%;
+			padding: 20px 20px;
+			animation: fade-in 0.4s ease-out;
+
+			div {
+				&.menu-box {
+					margin-bottom: 5px;
+
+					&::after {
+						content: "";
+						display: block;
+						width: 100%;
+						height: 1px;
+						background-color: $secondary-border;
+						margin-top: 5px;
+					}
+
+					.menu-all {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						padding: 15px 20px;
+						border-radius: 10px;
+						cursor: pointer;
+						transition: 0.1s;
+
+						&:hover {
+							background-color: $primary-btn-hover;
+							color: $primary-btn-hover-text;
+						}
+
+						&.active {
+							background-color: $primary-btn-active;
+							color: $primary-btn-active-text;
+						}
+					}
+
+					.menu-subject {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						padding: 15px 20px;
+						border-radius: 10px;
+						cursor: pointer;
+						transition: 0.1s;
+
+						&:hover {
+							background-color: $primary-btn-hover;
+							color: $primary-btn-hover-text;
+
+							&::after {
+								filter: invert(1);
+							}
+						}
+
+						&::after {
+							content: "";
+							display: inline-block;
+							width: 10px;
+							min-width: 10px;
+							height: 7px;
+							margin-left: 20px;
+							background-image: url("../images/icon/down-icon.png");
+							background-size: contain;
+							background-repeat: no-repeat;
+						}
+
+						&.active {
+							&::after {
+								background-image: url("../images/icon/up-icon.png");
+							}
+						}
+
+						h3 {
+							word-break: break-all;
+						}
+					}
+
+					.menu-item-box {
+						display: none;
+						flex-direction: column;
+						padding: 5px 20px;
+
+						&.visible {
+							animation: fade-in 0.4s ease-out;
+						}
+
+						&.invisible {
+							animation: fade-out 0.4s ease-out;
+						}
+
+						.menu-item {
+							padding: 8px 10px;
+							font-size: 18px;
+							font-weight: 500;
+							cursor: pointer;
+							transition: transform 0.3s ease;
+
+							&:hover, &.active {
+								color: $primary-text-hover;
+								font-weight: 700;
+								transform: translateX(-8px);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
