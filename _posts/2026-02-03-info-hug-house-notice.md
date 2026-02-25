@@ -8,19 +8,25 @@ thumbnail: /page/etc/menu/info/images/thumbnail-hug.png
 link-type: link
 ---
 
-### 든든전세주택이란?
+## 든든전세주택이란?
 - HUG가 전세보증금을 대신 갚아준 주택을 직접 낙찰받아 주변 시세보다 저렴하게 임대공급하는 사업
 
-### 든든전세주택의 장점
+<br/>
+
+## 든든전세주택의 장점
 1. HUG가 집주인이니까 보증금 떼일 걱정 NO!
 2. 최대 8년동안 주변 전세가 대비 90%로 저렴한 가격!
 3. 입주 시 나이, 소득 심사 NO!
 
-### 입주요건 및 임대기간
+<br/>
+
+## 입주요건 및 임대기간
 - <span class="marker">무주택 세대주이거나 무주택세대의 구성원</span>
 - <span class="marker">2년, 재계약 3회 까지 가능(입주자격 유지 시 최장 8년 거주 가능)</span>
 
-### 모집절차
+<br/>
+
+## 모집절차
 <div class="flow">
 	<div class="flow-box">
 		<div class="flow-title">
@@ -92,10 +98,14 @@ link-type: link
 	</div>
 </div>
 
-### 든든전세주택 매물 목록
+<br/>
+
+## 든든전세주택 매물 목록
 - [KB부동산][kbland]{:target="_blank"}에서 로그인 후, <span class="marker">[ 메뉴 - 공공주택 - HUG든든전세주택 - 지도로 매물보기 ]</span>로 접속하시면 매물의 위치를 쉽게 확인하실 수 있습니다.
 
-### 든든전세주택 신청 링크
+<br/>
+
+## 든든전세주택 신청 링크
 - [든든전세주택 모집공고문][hug-jeonse-notice-pdf]{:target="_blank"}
 - <span class="marker">[든든전세주택 입주신청][hug-jeonse]{:target="_blank"}</span>
 

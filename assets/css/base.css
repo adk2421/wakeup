@@ -4,6 +4,8 @@
  
 :root {
 	--classic-blue: #0f4c81;
+	--light-blue-gray: #e8eef3;
+	--blue-gray: #d1d9df;
 	--white: #fff;
 
 	--primary-color: var(--classic-blue);
@@ -35,6 +37,11 @@
 	--marker-orange: #ffdc8c;
 }
 
+html {
+	font-size: 16px;
+	font-weight: 400;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -44,8 +51,6 @@ body {
 	display: flex;
 	min-height: 100vh;
 	font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 16px;
-	font-weight: 400;
 	line-height: 1.5;
 	color: var(--text-color);
 	background-color: var(--bg-color);
@@ -112,6 +117,10 @@ body {
 
 /* Mobile Screen */
 @media screen and (max-width: 767px) {
+	html {
+		font-size: 15px;
+	}
+
 	.container {
 		flex-direction: column;
 		min-width: 100%;
@@ -144,6 +153,47 @@ body {
 
 	.container .page .content .menu-title {
 		text-align: center;
+	}
+	
+	.container .page .content .index .post .post-card {
+		display: flex;
+		width: 300px !important;
+		height: auto !important;
+		padding: 15px !important;
+		margin: 15px 0 !important;
+		gap: 15px;
+	}
+
+	.container .page .content .index .post .post-card .post-thumbnail {
+		width: 63px !important;
+		height: 63px !important;
+	}
+
+	.container .page .content .index .post .post-card .post-info {
+		width: 200px !important;
+		padding: 0 !important;
+	}
+
+	.container .page .content .index .post .post-card .post-info .post-category {
+		margin: 0 !important;
+		font-size: 10px !important;
+	}
+
+	.container .page .content .index .post .post-card .post-info .post-title {
+		margin: 4px 0 !important;
+		font-size: 16px !important;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	.container .page .content .index .post .post-card .post-info .post-meta {
+		margin: 0 !important;
+		font-size: 11px !important;
+	}
+
+	.container .page .content .index .post .post-card .post-info .post-short-content {
+		display: none;
 	}
 
 	.container .page .content .post {
@@ -178,28 +228,4 @@ body {
 		opacity: 0;
 		transform: translateY(-8px);
 	}
-}
-
-/* Tag */
-ul {
-	margin-left: 30px;
-}
-
-ul li {
-	margin: 8px 0;
-	font-weight: 500;
-}
-
-ol {
-	margin-left: 30px;
-}
-
-ol li {
-	margin: 8px 0;
-	font-weight: 500;
-}
-
-ol li::marker {
-	margin-right: 8px;
-	font-weight: 500;
 }

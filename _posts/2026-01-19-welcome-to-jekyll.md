@@ -3,7 +3,7 @@ layout: post
 title: "Welcome to Jekyll!"
 author: 김지성
 date: 2026-01-19 10:45:40 +0900
-categories: jekyll update
+categories: etc sample
 link-type: link
 ---
 
