@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<link rel="stylesheet" href="{{ site.settings.url.css | relative_url }}/post.css">
+
 {% assign menu = site.data.menu | where: "name", page.categories[0] | first %}
 {% if menu %}
 	{% assign subMenu = menu.subMenu | where: "name", page.categories[1] | first %}
