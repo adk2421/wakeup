@@ -97,7 +97,7 @@ link-type: link
 
 ### 든든전세주택 신청 링크
 - [든든전세주택 모집공고문][hug-jeonse-notice-pdf]{:target="_blank"}
-- <span class="marker fs-20">[든든전세주택 입주신청][hug-jeonse]{:target="_blank"}</span>
+- <span class="marker">[든든전세주택 입주신청][hug-jeonse]{:target="_blank"}</span>
 
 
 [kbland]: https://kbland.kr/menu
