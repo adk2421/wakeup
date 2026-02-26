@@ -122,10 +122,10 @@ Images
 
 > <span class="marker">Image [ !\[\]() ]</span>
 >> Local
->> ![WakeUp](/wakeup/assets/images/post/post-thumbnail-default.png "Local")
+>> ![WakeUp](/wakeup/assets/images/post/test-image.png "Local")
 >> <span class="caption">출처: [WakeUp](https://adk2421.github.io/wakeup/)</span>  
 >> URL
->> ![WakeUp](https://adk2421.github.io/wakeup/assets/images/post/post-thumbnail-default.png "URL")
+>> ![WakeUp](https://adk2421.github.io/wakeup/assets/images/post/test-image.png "URL")
 >> <span class="caption">출처: [WakeUp](https://adk2421.github.io/wakeup/)</span>
 
 > <span class="marker">Link [ \[!\[\]()\]() ]</span>

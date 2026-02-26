@@ -34,7 +34,7 @@ dd { margin: 4px 0 0 15px; }
 dd dt { font-size: 1em; }
 dd dd::before { content: "↳"; margin-right: 4px; }
 
-.post-content p { margin-bottom: 10px; }
+.post-content p { margin-bottom: 0.5em; }
 .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 { margin: 0 0 5px 2px; }
 
 /* font style */

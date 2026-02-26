@@ -118,7 +118,7 @@
 
 .container .page .footer .footer-info {
 	display: flex;
-	margin-bottom: 30px;
+	margin-bottom: 8px;
 }
 
 .container .page .footer .footer-info a {
@@ -135,7 +135,6 @@
 }
 
 .container .page .footer .footer-desc {
-	margin-bottom: 20px;
 	padding-top: 8px;
     border-top: 3px solid #b8b8b8;
 	color: var(--text-middle-color);

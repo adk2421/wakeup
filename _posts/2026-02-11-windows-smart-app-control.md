@@ -17,38 +17,22 @@ link-type: link
 
 ## - 해결 방법 -
 
-<div class="mb-15"></div>
-
-#### 1. 윈도우 버튼을 누른 다음 <span class="marker">Windows 보안</span>을 검색해서 들어간다.
 <div class="mb-10"></div>
+
+> #### 1. 윈도우 버튼을 누른 다음 <span class="marker">Windows 보안</span>을 검색해서 들어간다.
 ![alt text]({{ site.baseurl }}/page/error/menu/windows/images/smart-app-control-2.png)
 
-<br/>
-
-#### 2. <span class="marker">앱 및 브라우저 컨트롤</span> 클릭
-<div class="mb-10"></div>
+> #### 2. <span class="marker">앱 및 브라우저 컨트롤</span> 클릭
 ![alt text]({{ site.baseurl }}/page/error/menu/windows/images/smart-app-control-3.png)
 
-<br/>
-
-#### 3. <span class="marker">스마트 앱 컨트롤 설정</span>클릭
-<div class="mb-10"></div>
+> #### 3. <span class="marker">스마트 앱 컨트롤 설정</span>클릭
 ![alt text]({{ site.baseurl }}/page/error/menu/windows/images/smart-app-control-4.png)
 
-<br/>
-
-#### 4. <span class="marker">끄기</span>를 클릭하면
-<div class="mb-10"></div>
+> #### 4. <span class="marker">끄기</span>를 클릭하면
 ![alt text]({{ site.baseurl }}/page/error/menu/windows/images/smart-app-control-5.png)
 
-<br/>
-
-#### 5. 이런 확인창이 나오는데 '예'를 누른다. <span class="marker">(끈다해도 사용하는데 아무 지장이 없다.)</span>
-<div class="mb-10"></div>
+> #### 5. 이런 확인창이 나오는데 '예'를 누른다. <span class="marker">(끈다해도 사용하는데 아무 지장이 없다.)</span>
 ![alt text]({{ site.baseurl }}/page/error/menu/windows/images/smart-app-control-6.png)
 
-<br/>
-
-#### 6. 결과 <span class="marker">(26년 업데이트 이후로 켜고 끄는 것을 사용자가 자유롭게 설정할 수 있다고 한다.)</span>
-<div class="mb-10"></div>
+> #### 6. 결과 <span class="marker">(26년 업데이트 이후로 켜고 끄는 것을 사용자가 자유롭게 설정할 수 있다고 한다.)</span>
 ![alt text]({{ site.baseurl }}/page/error/menu/windows/images/smart-app-control-7.png)
