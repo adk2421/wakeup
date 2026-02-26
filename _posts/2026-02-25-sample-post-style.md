@@ -121,11 +121,16 @@ Images
 ---------------
 
 > <span class="marker">Image [ !\[\]() ]</span>
->> ![WakeUp](/wakeup/assets/images/icon/favicon.png "local")
->> ![WakeUp](https://adk2421.github.io/wakeup/assets/images/icon/favicon.png "Network")  
+>> Local
+>> ![WakeUp](/wakeup/assets/images/post/post-thumbnail-default.png "Local")
+>> <span class="caption">출처: [WakeUp](https://adk2421.github.io/wakeup/)</span>  
+>> URL
+>> ![WakeUp](https://adk2421.github.io/wakeup/assets/images/post/post-thumbnail-default.png "URL")
+>> <span class="caption">출처: [WakeUp](https://adk2421.github.io/wakeup/)</span>
 
 > <span class="marker">Link [ \[!\[\]()\]() ]</span>
->> [![WakeUp](https://adk2421.github.io/wakeup/assets/images/icon/favicon.png "link")](https://adk2421.github.io/wakeup/)
+>> [![WakeUp](https://adk2421.github.io/wakeup/assets/images/icon/favicon.png "link")](https://adk2421.github.io/wakeup/)  
+>> 클릭 시, 홈으로 이동
 
 <br/>
 
@@ -137,12 +142,16 @@ ETC
 >> 두 번째 줄  
 >> 세 번째 줄
 
-<br/>
+> <span class="marker">Tables [ | | | ]</span>
+>> | header1     | header2         | header3         | header4         |
+>> | ----------- | --------------- | :-------------: | --------------: |
+>> | text1       | ABCDEFGHI       | ABCDEFGHI       | ABCDEFGHI       |
+>> | text2       | 가나다라마바사아자 | 가나다라마바사아자 | 가나다라마바사아자 |
 
-sss
-: sadfasdfds
-
-Tables
-
-
-- [x] asdfasdfasd
+> <span class="marker">Definition Lists [ : ]</span>
+>> Definition
+>> : - (어떤 개념의) 의미[정의]
+>> : - (특히 사전에 나오는 단어나 구의) 정의
+>> : - 선명도
+>>   : [전기·전자] 렌즈를 통하여 맺혀진 상(像)의 밝기나 세부(細部)를 분간할 수 있는 정도.
+>>   : [정보·통신] 텔레비전이나 팩시밀리의 사진 전송 따위에 나타나는 화면의 산뜻하고 뚜렷한 정도.

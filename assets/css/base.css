@@ -128,7 +128,7 @@ body {
 
 	.container .menu-bar {
 		width: auto !important;
-		padding: 15px 30px;
+		padding: 15px 22px;
 		background-color: var(--bg-middle-color);
 		border-bottom: 1px solid var(--primary-border);
 	}
@@ -154,45 +154,31 @@ body {
 	.container .page .content .menu-title {
 		text-align: center;
 	}
-	
+
 	.container .page .content .index .post .post-card {
-		display: flex;
-		width: 300px !important;
-		height: auto !important;
-		padding: 15px !important;
-		margin: 15px 0 !important;
-		gap: 15px;
+		padding: 0 !important;
+		border: 1px solid #cfcfcf;
 	}
 
 	.container .page .content .index .post .post-card .post-thumbnail {
-		width: 63px !important;
-		height: 63px !important;
+		border: none !important;
+		border-bottom: 1px solid #ebebeb !important;
+		border-radius: 10px 10px 0 0 !important;
+	}
+
+	.container .page .content .index .post .post-card .post-thumbnail img {
+		border-radius: 10px 10px 0 0 !important;
 	}
 
 	.container .page .content .index .post .post-card .post-info {
-		width: 200px !important;
-		padding: 0 !important;
-	}
-
-	.container .page .content .index .post .post-card .post-info .post-category {
-		margin: 0 !important;
-		font-size: 10px !important;
+		padding: 15px 20px 20px 20px !important;
 	}
 
 	.container .page .content .index .post .post-card .post-info .post-title {
-		margin: 4px 0 !important;
-		font-size: 16px !important;
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
+		margin-bottom: 10px !important;
 	}
 
 	.container .page .content .index .post .post-card .post-info .post-meta {
-		margin: 0 !important;
-		font-size: 11px !important;
-	}
-
-	.container .page .content .index .post .post-card .post-info .post-short-content {
 		display: none;
 	}
 
