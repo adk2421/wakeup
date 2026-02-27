@@ -1,5 +1,17 @@
 [
 	{
+		"title": "언어",
+		"name": "language",
+		"url": "/language/",
+		"subMenu": [
+			{
+				"title": "Markdown",
+				"name": "markdown",
+				"url": "/language/markdown/"
+			}
+		]
+	},
+	{
 		"title": "템플릿",
 		"name": "template",
 		"url": "/template/",
