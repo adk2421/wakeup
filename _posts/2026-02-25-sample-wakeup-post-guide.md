@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: [etc, sample]
-title: "Markdown Post Sample"
+title: "WakeUp Post Guide"
 author: 김지성
 date: 2026-02-25 10:10:00 +0900
 link-type: link
