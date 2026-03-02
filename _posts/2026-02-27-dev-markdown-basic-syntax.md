@@ -1,10 +1,10 @@
 ---
 layout: post
-categories: [language, markdown]
+categories: [dev, markdown]
 title: "마크다운(Markdown) 기본 구문"
 author: 김지성
 date: 2026-02-27 15:40:00 +0900
-thumbnail: /page/language/menu/markdown/images/thumbnail-markdown.png
+thumbnail: /page/dev/menu/markdown/images/thumbnail-markdown.png
 link-type: link
 ---
 

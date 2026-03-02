@@ -1,25 +1,18 @@
 [
 	{
-		"title": "언어",
-		"name": "language",
-		"url": "/language/",
+		"title": "개발",
+		"name": "dev",
+		"url": "/dev/",
 		"subMenu": [
 			{
 				"title": "Markdown",
 				"name": "markdown",
-				"url": "/language/markdown/"
-			}
-		]
-	},
-	{
-		"title": "템플릿",
-		"name": "template",
-		"url": "/template/",
-		"subMenu": [
+				"url": "/dev/markdown/"
+			},
 			{
 				"title": "CSS",
 				"name": "css",
-				"url": "/template/css/"
+				"url": "/dev/css/"
 			}
 		]
 	},

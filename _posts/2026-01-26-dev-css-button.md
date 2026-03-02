@@ -1,14 +1,14 @@
 ---
 layout: post
-categories: [template, css]
+categories: [dev, css]
 title: "CSS 버튼 템플릿"
 author: 김지성
 date: 2026-01-26 10:45:40 +0900
-thumbnail: /page/template/menu/css/images/thumbnail-css.png
+thumbnail: /page/dev/menu/css/images/thumbnail-css.png
 link-type: link
 ---
 
-<link rel="stylesheet" href="{{ "/page/template/menu/css/css/css-button.css" | relative_url }}">
+<link rel="stylesheet" href="{{ "/page/dev/menu/css/css/css-button.css" | relative_url }}">
 
 #### 버튼 기본 스타일
 {% highlight css %}
