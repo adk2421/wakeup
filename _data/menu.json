@@ -51,11 +51,6 @@
 				"url": "/etc/info/"
 			},
 			{
-				"title": "테스트",
-				"name": "test",
-				"url": "/etc/test/"
-			},
-			{
 				"title": "Sample",
 				"name": "sample",
 				"url": "/etc/sample/"
