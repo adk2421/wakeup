@@ -44,6 +44,7 @@ dd dd::before { content: "↳"; margin-right: 4px; }
 .bold { font-weight: 800; }
 .marker { padding: 2px 4px; background-color: var(--marker-orange); font-weight: 600; }
 .emphasis { font-weight: 600; color: red; }
+.tab { margin-left: 15px; }
 
 /* white space */
 .mb-10 { margin-bottom: 10px; }
