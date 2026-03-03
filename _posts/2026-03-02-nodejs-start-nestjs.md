@@ -3,13 +3,13 @@ layout: post
 categories: [dev, nodejs]
 title: "NestJS 시작하기"
 author: 김지성
-date: 2026-03-01 00:05:00 +0900
+date: 2026-03-02 16:30:00 +0900
 thumbnail: /page/dev/menu/nodejs/images/thumbnail-nestjs.png
 link-type: link
 ---
 
 ## 개요
-**NestJS**는 `Node.js`를 기반으로 한 서버 어플리케이션 프레임워크다. 프레임워크는 일종의 가이드라인 역할을 하며, 정해진 구조 안에서 개발을 하기 때문에 협업 진행 시 코드 분석 속도 향상에 도움이 될 수 있다.
+**NestJS**는 `Node.js`의 `Express`를 기반으로 한 서버 어플리케이션 프레임워크다. 프레임워크는 일종의 가이드라인 역할을 하며, 정해진 구조 안에서 개발을 하기 때문에 협업 진행 시 코드 분석 속도 향상에 도움이 될 수 있다. 또한, TypeScript로 설계되어 타입 체킹 기능으로 런타임 에러도 줄일 수 있다.
 
 그럼 Node.js가 설치된 상태에서 Windows, VS Code 기준으로 [NestJS Docs](https://docs.nestjs.com/)를 참고하여 설치부터 서버 실행까지 진행해보겠다.
 
