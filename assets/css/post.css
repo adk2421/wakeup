@@ -11,7 +11,7 @@ li { margin: 8px 0; font-weight: 500; }
 li::marker { margin-right: 8px; font-weight: 500; }
 li a { font-weight: 800; color: var(--primary-color); }
 li a:hover { color: var(--secondary-color); }
-img { max-width: 100%; }
+img { display:block; max-width: 100%; }
 blockquote { padding: 20px 25px 10px 25px; margin-bottom: 10px; background-color: var(--light-blue-gray); border: 1px solid #dee4ea; border-radius: 5px; max-width: 100%; overflow-x: auto; }
 blockquote blockquote { filter: brightness(95%); }
 div.highlighter-rouge { padding-bottom: 10px; }
@@ -42,7 +42,7 @@ dd dd::before { content: "↳"; margin-right: 4px; }
 .fs-20 { font-size: 20px; }
 .primary-color { color: var(--primary-color); }
 .bold { font-weight: 800; }
-.marker { padding: 2px 4px; background-color: var(--marker-orange); font-weight: 600; }
+.marker { width: fit-content; padding: 2px 4px; background-color: var(--marker-orange); font-weight: 600; }
 .emphasis { font-weight: 600; color: red; }
 .tab { margin-left: 15px; }
 
