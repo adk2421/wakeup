@@ -1,16 +1,16 @@
 ---
 layout: post
-categories: [dev, markdown]
-title: "마크다운(Markdown) 기본 구문"
+categories: [dev, syntax]
+title: "마크다운(Markdown) 기본 문법"
 author: 김지성
 date: 2026-02-27 15:40:00 +0900
-thumbnail: /page/dev/menu/markdown/images/thumbnail-markdown.png
+thumbnail: /page/dev/menu/syntax/images/thumbnail-markdown.png
 link-type: link
 ---
 
 개요
 ---------------
-사이트마다 형식이 다를 수 있으며, [Markdown Guide](https://www.markdownguide.org/basic-syntax/)를 참고하여 마크다운 기본 구문을 다룬다.
+사이트마다 형식이 다를 수 있으며, [Markdown Guide](https://www.markdownguide.org/basic-syntax/)를 참고하여 마크다운 기본 문법을 다룬다.
 
 <br/>
 

@@ -5,31 +5,36 @@
 		"url": "/dev/",
 		"subMenu": [
 			{
-				"title": "Node.js",
-				"name": "nodejs",
-				"url": "/dev/nodejs/"
+				"title": "시작하기",
+				"name": "start",
+				"url": "/dev/start/"
 			},
 			{
-				"title": "Markdown",
-				"name": "markdown",
-				"url": "/dev/markdown/"
+				"title": "문법",
+				"name": "syntax",
+				"url": "/dev/syntax/"
 			},
 			{
-				"title": "CSS",
-				"name": "css",
-				"url": "/dev/css/"
+				"title": "템플릿",
+				"name": "template",
+				"url": "/dev/template/"
+			},
+			{
+				"title": "자체 제작",
+				"name": "selfmade",
+				"url": "/dev/selfmade/"
 			}
 		]
 	},
 	{
-		"title": "오류",
-		"name": "error",
-		"url": "/error/",
+		"title": "운영체제",
+		"name": "os",
+		"url": "/os/",
 		"subMenu": [
 			{
 				"title": "Windows",
 				"name": "windows",
-				"url": "/error/windows/"
+				"url": "/os/windows/"
 			}
 		]
 	},
@@ -39,17 +44,12 @@
 		"url": "/etc/",
 		"subMenu": [
 			{
-				"title": "유틸",
-				"name": "util",
-				"url": "/etc/util/"
-			},
-			{
 				"title": "정보",
 				"name": "info",
 				"url": "/etc/info/"
 			},
 			{
-				"title": "Sample",
+				"title": "샘플",
 				"name": "sample",
 				"url": "/etc/sample/"
 			}

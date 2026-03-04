@@ -1,10 +1,10 @@
 ---
 layout: post
-categories: [dev, css]
+categories: [dev, template]
 title: "CSS 버튼 템플릿"
 author: 김지성
 date: 2026-01-26 10:45:40 +0900
-thumbnail: /page/dev/menu/css/images/thumbnail-css.png
+thumbnail: /page/dev/menu/template/images/thumbnail-css.png
 link-type: link
 ---
 

@@ -1,14 +1,14 @@
 ---
 layout: single-page
-categories: [etc, util]
+categories: [dev, selfmade]
 title: "키보드 테스트"
 author: 김지성
 date: 2026-02-05 16:30:00 +0900
-thumbnail: /page/etc/menu/util/images/thumbnail-keyboard-test.jpg
+thumbnail: /page/dev/menu/selfmade/images/thumbnail-keyboard-test.jpg
 link-type: blank
 ---
 
-<link rel="stylesheet" href="{{ "/page/etc/menu/util/css/keyboard-test.css" | relative_url }}">
+<link rel="stylesheet" href="{{ "/page/dev/menu/selfmade/css/keyboard-test.css" | relative_url }}">
 
 <div class="center">
 	<div class="monitor">
