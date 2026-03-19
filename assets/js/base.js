@@ -54,14 +54,19 @@ const customEvent = {
 				e.preventDefault(); // 페이지 새로고침 방지
 				
 				const clickLink = el.closest(".link");
-				movePageEvent.movePage(clickLink);
+				movePageEvent.page(clickLink);
 
 			// 새 창 열기
 			} else if (el.closest(".blank")) {
 				e.preventDefault(); // 페이지 새로고침 방지
 
 				const clickLink = el.closest(".blank");
-				movePageEvent.moveSinglePage(clickLink);
+				movePageEvent.singlePage(clickLink);
+
+			// 이미지 확대
+			} else if (el.closest("img") && el.closest(".post-img")) {
+				const clickImage = el.closest("img");
+				popupEvent.dimImage(clickImage);
 			}
 		});
 	}
@@ -76,19 +81,19 @@ const customEvent = {
  */
 const movePageEvent = {
 	/**
-	 * [ movePageEvent.moveHome ]
+	 * [ movePageEvent.home ]
 	 * : 홈 이동
 	 */
-	moveHome: () => {
+	home: () => {
 		const menuAll = document.querySelector(".menu-all");
 		menuAll.click();
 	},
 
 	/**
-	 * [ movePageEvent.movePage ]
+	 * [ movePageEvent.page ]
 	 * : 페이지 이동
 	 */
-	movePage: (clickLink) => {
+	page: (clickLink) => {
 		const url = clickLink.getAttribute("data-link");
 		history.pushState(null, "", url);
 
@@ -119,20 +124,54 @@ const movePageEvent = {
 	},
 
 	/**
-	 * [ movePageEvent.moveSinglePage ]
+	 * [ movePageEvent.singlePage ]
 	 * : 단일 페이지 이동
 	 */
-	moveSinglePage: (clickLink) => {
+	singlePage: (clickLink) => {
 		const url = clickLink.getAttribute("data-link");
 		location.href = url;
 	},
 
 	/**
-	 * [ movePageEvent.moveBack ]
+	 * [ movePageEvent.back ]
 	 * : 이전 페이지 이동
 	 */
-	moveBack: () => {
+	back: () => {
 		history.back();
+	}
+}
+
+/**
+ * [ popupEvent ]
+ * : 팝업 이벤트
+ * 
+ * @author adk2421
+ * @since 2026-03-19
+ */
+const popupEvent = {
+	/**
+	 * [ popupEvent.dimImage ]
+	 * : Dim 이미지 팝업
+	 */
+	dimImage: (image) => {
+		const dim = document.querySelector(".dim");
+
+		// dim 위에 표시할 이미지 추가
+		const imageDiv = document.createElement("div");
+		imageDiv.classList.add("dim-img");
+		imageDiv.insertAdjacentElement("afterbegin", image.cloneNode(false));
+
+		// dim 화면 출력 및 스크롤 비활성화 적용
+		dim.style.display = "block";
+		dim.insertAdjacentElement("afterbegin", imageDiv);
+		document.querySelector("body").style.overflow = "hidden";
+
+		// 다시 화면을 눌렀을 때 dim 화면 숨김 및 스크롤 활성화
+		dim.addEventListener("click", () => {
+			dim.style.display = "none";
+			imageDiv.remove();
+			document.querySelector("body").style.overflow = "auto";
+		})
 	}
 }
 

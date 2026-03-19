@@ -26,7 +26,7 @@
 .container .page .content .index .post .empty-post {
 	width: 100%;
 	padding: 10vh 0;
-    text-align: center;
+	text-align: center;
 	font-size: 1.8em;
 }
 
@@ -67,12 +67,12 @@
 }
 
 .container .page .content .index .post .post-card .post-category {
-    width: fit-content;
-    padding: 1.5px 6px;
-    border-radius: 4px;
-    font-size: 0.7em;
-    background-color: #6995be;
-    color: #fdfdfd;
+	width: fit-content;
+	padding: 1.5px 6px;
+	border-radius: 4px;
+	font-size: 0.7em;
+	background-color: #6995be;
+	color: #fdfdfd;
 }
 
 .container .page .content .index .post .post-card .post-info .post-title {
@@ -89,7 +89,7 @@
 	color: var(--text-middle-color);
 }
 
-.container .page .content .index .post .post-card .post-info .post-meta > .icon {
+.container .page .content .index .post .post-card .post-info .post-meta>.icon {
 	fill: var(--text-color);
 	vertical-align: middle;
 	margin-right: 2px;
@@ -103,6 +103,20 @@
 	text-overflow: ellipsis;
 	font-size: 0.8em;
 	color: var(--text-middle-color);
+}
+
+.container .page .content .index .post .post-card .post-info .post-skills {
+	font-size: 0.7em;
+	line-height: 2em;
+}
+
+.container .page .content .index .post .post-card .post-info .post-skills .post-skill {
+	padding: 2px 6px;
+	margin-right: 1px;
+	border-radius: 4px;
+	background-color: var(--marker-green);
+	color: var(--secondary-light);
+	width: fit-content;
 }
 
 .container .page .footer {
@@ -130,13 +144,13 @@
 	flex: 1;
 }
 
-.container .page .footer .footer-info .footer-box > div {
+.container .page .footer .footer-info .footer-box>div {
 	padding: 3px 2px;
 }
 
 .container .page .footer .footer-desc {
 	padding-top: 8px;
-    border-top: 3px solid #b8b8b8;
+	border-top: 3px solid #b8b8b8;
 	color: var(--text-middle-color);
 }
 
@@ -145,6 +159,7 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	user-select: none;
 }
 
 .single-page .nav {
@@ -197,6 +212,6 @@
 .single-page .page-content .center {
 	display: flex;
 	flex-direction: column;
-    align-items: center;
+	align-items: center;
 	width: 100%;
 }

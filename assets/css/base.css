@@ -1,7 +1,7 @@
 /**
  * Base styles
  */
- 
+
 :root {
 	--classic-blue: #0f4c81;
 	--light-blue-gray: #e8eef3;
@@ -11,7 +11,7 @@
 	--primary-color: var(--classic-blue);
 	--secondary-color: #7eaad2;
 	--tertiary-color: #0086B3;
-	
+
 	--primary-light: #efefef;
 	--secondary-light: #fdfdfd;
 
@@ -35,6 +35,8 @@
 	--primary-text-hover: #066cc5;
 
 	--marker-orange: #ffdc8c;
+	--marker-blue: #2c6691;
+	--marker-green: #74965f;
 }
 
 html {
@@ -80,13 +82,33 @@ body {
 
 .container .page {
 	display: flex;
-  flex-direction: column;
+	flex-direction: column;
 	justify-content: space-between;
 	width: 100%;
 	height: 100%;
-	margin-top: 62px;
 	background-color: var(--bg-color);
 	animation: fade-in 0.4s ease-out;
+}
+
+.container .dim {
+	display: none;
+	position: fixed;
+	justify-items: center;
+	align-content: center;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.container .dim .dim-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+}
+
+.container .dim .dim-img img {
+	width: 100%;
 }
 
 .error-page {
@@ -107,16 +129,13 @@ body {
 	letter-spacing: -1px;
 }
 
-.home, .link, .blank {
+.home,
+.link,
+.blank {
 	cursor: pointer;
 }
 
-/* Tablet Screen */
-@media screen and (max-width: 1023px) {
-
-}
-
-/* Mobile Screen */
+/* Mobile, Tablet Screen */
 @media screen and (max-width: 1023px) {
 	html {
 		font-size: 15px;
@@ -152,6 +171,7 @@ body {
 	.container .page {
 		position: relative;
 		z-index: 0;
+		margin-top: 62px;
 	}
 
 	.container .page .content {
@@ -192,6 +212,17 @@ body {
 
 	.container .page .content .post {
 		justify-content: center;
+	}
+
+	.post-content .size-sm img,
+	.post-content .size-md img,
+	.post-content .size-lg img {
+		width: 100% !important;
+	}
+
+	.container .dim .dim-img,
+	.container .dim .dim-img img {
+		width: 100%;
 	}
 
 	.container .page .footer {

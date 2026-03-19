@@ -30,7 +30,10 @@ permalink: dev/selfmade/
 						</span>
 						{{ post.date | date: "%Y-%m-%d" }}
 					</div>
-					<div class="post-short-content">{{ post.content | strip_html | truncate: 90 }}</div>
+					<div class="post-skills">
+						{% for skill in post.skills %}
+							<span class="post-skill">{{ skill }}</span>
+						{% endfor %}</div>
 				</div>
 			</div>
 		{% endfor %}

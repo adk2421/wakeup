@@ -41,7 +41,7 @@ document.addEventListener("click", (e) => {
 	if (el.closest(".home")) {
 		e.preventDefault(); // 페이지 새로고침 방지
 
-		movePageEvent.moveHome();
+		movePageEvent.home();
 	}
 
 	// [menu-icon]
