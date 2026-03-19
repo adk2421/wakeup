@@ -1,7 +1,7 @@
 /**
  * Menu styles
  */
- 
+
 /* Web, Tablet Screen */
 .container .menu-bar div.hits {
 	padding: 12px 15px 0px 15px;
@@ -46,7 +46,7 @@
 
 .container .menu-bar div.profile .profile-name {
 	display: flex;
-    justify-content: center;
+	justify-content: center;
 	margin-bottom: 20px;
 	text-align: center;
 	color: var(--text-middle-color);
@@ -84,11 +84,13 @@
 	display: none;
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
+	width: stretch;
+	padding: 15px 22px;
 }
 
 .container .menu-bar .nav .site-title {
 	width: 100%;
+	max-width: fit-content;
 	font-size: 1.4em;
 	font-weight: 700;
 	text-decoration: none;
@@ -147,9 +149,7 @@
 	margin-top: 5px;
 }
 
-.container .menu-bar .menu div.menu-box .menu-link {
-	
-}
+.container .menu-bar .menu div.menu-box .menu-link {}
 
 .container .menu-bar .menu div.menu-box .menu-all,
 .container .menu-bar .menu div.menu-box .menu-subject {

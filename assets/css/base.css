@@ -60,7 +60,6 @@ body {
 	-o-font-feature-settings: "kern" 1;
 	font-feature-settings: "kern" 1;
 	font-kerning: normal;
-	animation: fade-in 0.4s ease-out;
 }
 
 .container {
@@ -81,11 +80,13 @@ body {
 
 .container .page {
 	display: flex;
-    flex-direction: column;
+  flex-direction: column;
 	justify-content: space-between;
 	width: 100%;
 	height: 100%;
+	margin-top: 62px;
 	background-color: var(--bg-color);
+	animation: fade-in 0.4s ease-out;
 }
 
 .error-page {
@@ -116,7 +117,7 @@ body {
 }
 
 /* Mobile Screen */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 	html {
 		font-size: 15px;
 	}
@@ -127,8 +128,10 @@ body {
 	}
 
 	.container .menu-bar {
-		width: auto !important;
-		padding: 15px 22px;
+		position: fixed;
+		z-index: 999;
+		width: 100%;
+		min-width: 0;
 		background-color: var(--bg-middle-color);
 		border-bottom: 1px solid var(--primary-border);
 	}
@@ -144,6 +147,11 @@ body {
 
 	.container .menu-bar .menu {
 		display: none;
+	}
+
+	.container .page {
+		position: relative;
+		z-index: 0;
 	}
 
 	.container .page .content {
