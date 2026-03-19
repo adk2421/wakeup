@@ -21,8 +21,8 @@ link-type: link
 <br/>
 
 ## 입주요건 및 임대기간
-- <span class="marker">무주택 세대주이거나 무주택세대의 구성원</span>
-- <span class="marker">2년, 재계약 3회 까지 가능(입주자격 유지 시 최장 8년 거주 가능)</span>
+- 무주택 세대주이거나 무주택세대의 구성원
+- 2년, 재계약 3회 까지 가능(입주자격 유지 시 최장 8년 거주 가능)
 
 <br/>
 
@@ -101,13 +101,13 @@ link-type: link
 <br/>
 
 ## 든든전세주택 매물 목록
-- [KB부동산][kbland]{:target="_blank"}에서 로그인 후, <span class="marker">[ 메뉴 - 공공주택 - HUG든든전세주택 - 지도로 매물보기 ]</span>로 접속하시면 매물의 위치를 쉽게 확인하실 수 있습니다.
+- [KB부동산][kbland]{:target="_blank"}에서 로그인 후, **[ 메뉴 - 공공주택 - HUG든든전세주택 - 지도로 매물보기 ]**로 접속하시면 매물의 위치를 쉽게 확인하실 수 있습니다.
 
 <br/>
 
 ## 든든전세주택 신청 링크
 - [든든전세주택 모집공고문][hug-jeonse-notice-pdf]{:target="_blank"}
-- <span class="marker">[든든전세주택 입주신청][hug-jeonse]{:target="_blank"}</span>
+- [든든전세주택 입주신청][hug-jeonse]{:target="_blank"}
 
 
 [kbland]: https://kbland.kr/menu

@@ -10,7 +10,7 @@ link-type: link
 Paragraphs
 ---------------
 
-> <span class="marker">Default</span>
+> **Default**
 >> ABCDEFG, 가나다라마바사
 
 <br/>
@@ -18,22 +18,22 @@ Paragraphs
 Headings
 ---------------
 
-> <span class="marker">h1 [ # ]</span>
+> **h1 [ # ]**
 >> # ABCDEFG, 가나다라마바사
 
-> <span class="marker">h2 [ ## ]</span>
+> **h2 [ ## ]**
 >> ## ABCDEFG, 가나다라마바사
 
-> <span class="marker">h3 [ ### ]</span>
+> **h3 [ ### ]**
 >> ### ABCDEFG, 가나다라마바사
 
-> <span class="marker">h4 [ #### ]</span>
+> **h4 [ #### ]**
 >> #### ABCDEFG, 가나다라마바사
 
-> <span class="marker">h5 [ ##### ]</span>
+> **h5 [ ##### ]**
 >> ##### ABCDEFG, 가나다라마바사
 
-> <span class="marker">h6 [ ###### ]</span>
+> **h6 [ ###### ]**
 >> ###### ABCDEFG, 가나다라마바사
 
 <br/>
@@ -41,10 +41,10 @@ Headings
 Emphasis
 ---------------
 
-> <span class="marker">Bold [ ** or __ ]</span>
+> **Bold [ ** or __ ]**
 >> **ABCDEFG, 가나다라마바사**
 
-> <span class="marker">Italic [ * or _ ]</span>
+> **Italic [ * or _ ]**
 >> *ABCDEFG, 가나다라마바사*
 
 <br/>
@@ -52,7 +52,7 @@ Emphasis
 Blockquotes
 ---------------
 
-> <span class="marker">Blockquotes [ > ]</span>
+> **Blockquotes [ > ]**
 >> Level 1
 >>> Level 2
 >>>> Level 3
@@ -62,13 +62,13 @@ Blockquotes
 Lists
 ---------------
 
-> <span class="marker">Ordered Lists [ 1. ]</span>
+> **Ordered Lists [ 1. ]**
 >> Subject
 >> 1. Item 1
 >> 2. Item 2
 >> 3. Item 3
 
-> <span class="marker">Unordered Lists [ - ]</span>
+> **Unordered Lists [ - ]**
 >> Subject
 >> - Item 1
 >> - Item 2
@@ -79,10 +79,10 @@ Lists
 Code Blocks
 ---------------
 
-> <span class="marker">Inline [ ` ]</span>
+> **Inline [ ` ]**
 >> `@GetMapping` is an annotation in Spring Boot.
 
-> <span class="marker">Block [ ``` ]</span>
+> **Block [ ``` ]**
 >> ```java
 @GetMapping("/index")
 public String index(LoginDto loginDto) {
@@ -96,7 +96,7 @@ public String index(LoginDto loginDto) {
 Horizontal Rules
 ---------------
 
-> <span class="marker">hr [ --- ]</span>
+> **hr [ --- ]**
 >> # 인사
 >> ---
 >> 블로그에 오신 것을 환영합니다.
@@ -106,11 +106,11 @@ Horizontal Rules
 Links
 ---------------
 
-> <span class="marker">Site [ \[\]() or \[\][] ]</span>
+> **Site [ \[\]() or \[\][] ]**
 >> 블로그 링크 1 : [Link](https://adk2421.github.io/wakeup/)  
 >> 블로그 링크 2 : [ReferenceLink][blog-link]
 
-> <span class="marker">Email [ <> ]</span>
+> **Email [ <> ]**
 >> 이메일 링크 : <adk24211@gmail.com>
 
 [blog-link]: https://adk2421.github.io/wakeup/
@@ -120,7 +120,7 @@ Links
 Images
 ---------------
 
-> <span class="marker">Image [ !\[\]() ]</span>
+> **Image [ !\[\]() ]**
 >> Local
 >> ![WakeUp](/wakeup/assets/images/post/test-image.png "Local")
 >> <span class="caption">출처: [WakeUp](https://adk2421.github.io/wakeup/)</span>  
@@ -128,7 +128,7 @@ Images
 >> ![WakeUp](https://adk2421.github.io/wakeup/assets/images/post/test-image.png "URL")
 >> <span class="caption">출처: [WakeUp](https://adk2421.github.io/wakeup/)</span>
 
-> <span class="marker">Link [ \[!\[\]()\]() ]</span>
+> **Link [ \[!\[\]()\]() ]**
 >> [![WakeUp](https://adk2421.github.io/wakeup/assets/images/icon/favicon.png "link")](https://adk2421.github.io/wakeup/)  
 >> 클릭 시, 홈으로 이동
 
@@ -137,18 +137,18 @@ Images
 ETC
 ---------------
 
-> <span class="marker">Line Break [ &nbsp;&nbsp; or \<br/> ]</span>
+> **Line Break [ &nbsp;&nbsp; or \<br/> ]**
 >> 첫 번째 줄  
 >> 두 번째 줄  
 >> 세 번째 줄
 
-> <span class="marker">Tables [ | | | ]</span>
+> **Tables [ | | | ]**
 >> | header1     | header2         | header3         | header4         |
 >> | ----------- | --------------- | :-------------: | --------------: |
 >> | text1       | ABCDEFGHI       | ABCDEFGHI       | ABCDEFGHI       |
 >> | text2       | 가나다라마바사아자 | 가나다라마바사아자 | 가나다라마바사아자 |
 
-> <span class="marker">Definition Lists [ : ]</span>
+> **Definition Lists [ : ]**
 >> Definition
 >> : - (어떤 개념의) 의미[정의]
 >> : - (특히 사전에 나오는 단어나 구의) 정의

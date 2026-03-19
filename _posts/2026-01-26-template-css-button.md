@@ -8,7 +8,7 @@ thumbnail: /page/dev/menu/template/images/thumbnail-css.png
 link-type: link
 ---
 
-<link rel="stylesheet" href="{{ "/page/dev/menu/css/css/css-button.css" | relative_url }}">
+<link rel="stylesheet" href="{{ "/page/dev/menu/template/css/css-button.css" | relative_url }}">
 
 #### 버튼 기본 스타일
 {% highlight css %}

@@ -11,6 +11,7 @@ link-type: link
 ## 개요
 **Express**는 `Node.js`를 기반으로 최소한의 기능만 갖춘 웹 프레임워크다. 정해진 구조가 없어 자유롭게 구성이 가능하지만, 필요한 기능들은 일일이 추가해야하는 번거로움이 있다. `JavaScript`를 기본으로 사용하지만, 설정을 통해 `TypeScript`로도 사용 가능하다.
 
+<br/>
 [Node.js](https://nodejs.org/ko/download)는 링크 페이지에서 설치 가능하며, Windows의 VS Code 기준으로 [Express](https://expressjs.com/)를 참고하여 설치부터 서버 실행까지 진행해보겠다.
 
 <br/>

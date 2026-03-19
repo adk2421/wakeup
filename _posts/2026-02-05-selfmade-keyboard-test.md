@@ -6,6 +6,7 @@ author: 김지성
 date: 2026-02-05 16:30:00 +0900
 thumbnail: /page/dev/menu/selfmade/images/thumbnail-keyboard-test.jpg
 link-type: blank
+skills: [HTML, CSS, JAVASCRIPT]
 ---
 
 <link rel="stylesheet" href="{{ "/page/dev/menu/selfmade/css/keyboard-test.css" | relative_url }}">
@@ -46,7 +47,7 @@ link-type: blank
 			<div class="key" data-value="Pause">Pause</div>
 			<div class="mr-20"></div>
 			<div class="lcd">
-				<img src="{{ '/page/etc/menu/util/images/keyboard-test-lcd.gif' | relative_url }}">
+				<img src="{{ '/page/dev/menu/selfmade/images/keyboard-test-lcd.gif' | relative_url }}">
 			</div>
 			<div class="mr-93"></div>
 			<div class="key knob"></div>
@@ -162,4 +163,4 @@ link-type: blank
 	</div>
 </div>
 
-<script src="/wakeup/page/etc/menu/util/js/keyboard-test.js"></script>
+<script src="/wakeup/page/dev/menu/selfmade/js/keyboard-test.js"></script>
