@@ -37,7 +37,7 @@ link-type: link
 
 <div class="pb-15"></div>
 
-#### <span class="emphasis">*</span> `h1(#)`, `h2(##)`는 이렇게도 사용 가능하다.
+<p class="bold"><span class="emphasis">*</span> `h1(#)`, `h2(##)`는 이렇게도 사용 가능하다.</p>
 > ```
 > h1
 > ===============
@@ -238,12 +238,12 @@ public String index(LoginDto loginDto) {
 
 <br/>
 
-ETC
+기타 문법
 ---------------
 ---
 
 > <span class="marker-blue">줄바꿈 ( Line Break )</span>
-> #### 문장의 맨 끝에 띄어쓰기를 두 번 해주면 줄바꿈이 된다.
+> <p class="bold">문장의 맨 끝에 띄어쓰기를 두 번 해주면 줄바꿈이 된다.</p>
 > ```
 > 첫 번째 줄  
 > 두 번째 줄  
@@ -254,7 +254,7 @@ ETC
 >> 세 번째 줄
 
 > <span class="marker-blue">표 ( Table )</span>
-> #### 테이블을 생성할 수 있고, 글자 정렬도 가능하다.
+> <p class="bold">테이블을 생성할 수 있고, 글자 정렬도 가능하다.</p>
 > ```
 > | header1 | header2   | header3   | header4   |
 > | ------- | --------- | :-------: | --------: |
@@ -268,7 +268,7 @@ ETC
 >> | text2   | 12345     | 12345     | 12345     |
 
 > <span class="marker-blue">정의 ( Definition )</span>
-> #### 용어에 대한 정의를 입력할 수 있다.
+> <p class="bold">용어에 대한 정의를 입력할 수 있다.</p>
 > ```
 > Definition
 > : (어떤 개념의) 의미[정의]

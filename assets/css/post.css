@@ -37,7 +37,7 @@
 .post-content p { margin-left: 0.2em; margin-bottom: 0.35em; letter-spacing: -0.2px; line-height: 1.4; }
 .post-content h1, .post-content h2 { margin-bottom: 0.35em; width: fit-content; padding: 0 20px 0 4px; line-height: 1em; box-shadow: inset 0 -12px var(--marker-orange); }
 .post-content h3, .post-content h4, .post-content h5, .post-content h6 { margin-bottom: 0.35em; }
-.post-content .post-img img { width: 25%; cursor: pointer; border: 1px solid var(--secondary-border); }
+.post-content .post-img img { width: 99%; cursor: pointer; border: 1px solid var(--secondary-border); }
 .post-content .post-img img:hover { filter: brightness(0.8); }
 .post-content .post-img.size-sm img { width: 25% }
 .post-content .post-img.size-md img { width: 50% }
@@ -47,7 +47,9 @@
 /* font style */
 .fs-20 { font-size: 20px; }
 .primary-color { color: var(--primary-color); }
-.bold { font-weight: 800; }
+.bold { font-weight: 700; }
+.bold-lg { font-size: 1.025em; font-weight: 700; }
+.bold-xl { font-size: 1.05em; font-weight: 700; }
 .marker { width: fit-content; padding: 2px 4px; background-color: var(--marker-orange); font-weight: 600; }
 .marker-blue { width: fit-content; padding: 2px 4px; background-color: var(--marker-blue); font-weight: 600; color: var(--primary-light) }
 .marker-green { width: fit-content; padding: 2px 4px; background-color: var(--marker-green); font-weight: 600; color: var(--primary-light) }
@@ -116,7 +118,7 @@
 }
 
 .post .post-content {
-	overflow: auto;
+	overflow-x: hidden;
 	margin-bottom: 30px;
 }
 
