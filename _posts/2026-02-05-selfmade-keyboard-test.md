@@ -4,7 +4,7 @@ categories: [dev, selfmade]
 title: "키보드 테스트"
 author: 김지성
 date: 2026-02-05 16:30:00 +0900
-thumbnail: /page/dev/menu/selfmade/images/thumbnail-keyboard-test.jpg
+thumbnail: /page/dev/menu/selfmade/images/thumbnail-keyboard-test.png
 link-type: blank
 skills: [HTML, CSS, JAVASCRIPT]
 ---
