@@ -209,6 +209,10 @@ body {
 		display: none;
 	}
 
+	.container .page .content .index .pagination {
+		margin: 1em 0 !important;
+	}
+
 	.container .page .content .post {
 		justify-content: center;
 	}
