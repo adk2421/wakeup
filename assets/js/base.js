@@ -63,6 +63,11 @@ const customEvent = {
 				const clickLink = el.closest(".blank");
 				movePageEvent.singlePage(clickLink);
 
+			// 단일 페이지 홈 버튼
+			} else if (el.closest(".home") && el.closest(".single-page")) {
+				const clickHome = el.closest(".home");
+				movePageEvent.singlePageHome(clickHome);
+
 			// 이미지 확대
 			} else if (el.closest("img") && el.closest(".post-img")) {
 				const clickImage = el.closest("img");
@@ -80,15 +85,6 @@ const customEvent = {
  * @since 2026-02-02
  */
 const movePageEvent = {
-	/**
-	 * [ movePageEvent.home ]
-	 * : 홈 이동
-	 */
-	home: () => {
-		const menuAll = document.querySelector(".menu-all");
-		menuAll.click();
-	},
-
 	/**
 	 * [ movePageEvent.page ]
 	 * : 페이지 이동
@@ -129,6 +125,24 @@ const movePageEvent = {
 	 */
 	singlePage: (clickLink) => {
 		const url = clickLink.getAttribute("data-link");
+		location.href = url;
+	},
+
+	/**
+	 * [ movePageEvent.home ]
+	 * : 홈 이동
+	 */
+	home: () => {
+		const menuAll = document.querySelector(".menu-all");
+		menuAll.click();
+	},
+
+	/**
+	 * [ movePageEvent.singlePageHome ]
+	 * : 단일 페이지 홈 이동
+	 */
+	singlePageHome: (clickHome) => {
+		const url = clickHome.getAttribute("data-link");
 		location.href = url;
 	},
 

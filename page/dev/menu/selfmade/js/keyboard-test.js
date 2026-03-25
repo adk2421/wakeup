@@ -1,6 +1,3 @@
-// 이전화면 이동
-document.querySelector(".back").addEventListener("click", () => movePageEvent.back());
-
 // Keydown 이벤트
 document.addEventListener("keydown", (e) => {
 	e.preventDefault(); // 브라우저 기능 방지

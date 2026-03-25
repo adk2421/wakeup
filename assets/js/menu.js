@@ -40,8 +40,7 @@ document.addEventListener("click", (e) => {
 	// [home]
 	if (el.closest(".home")) {
 		e.preventDefault(); // 페이지 새로고침 방지
-
-		movePageEvent.home();
+		menuEvent.clickHome();
 	}
 
 	// [menu-icon]
@@ -77,6 +76,14 @@ document.addEventListener("click", (e) => {
  * @since 2026-01-21
  */
 const menuEvent = {
+	/**
+	 * [ menuEvent.clickHome ]
+	 * : 홈 클릭
+	 */
+	clickHome: () => {
+		movePageEvent.home();
+	},
+	
 	/**
 	 * [ menuEvent.toggleMenuIcon ]
 	 * : 메뉴 아이콘 토글
