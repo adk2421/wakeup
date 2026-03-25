@@ -171,6 +171,7 @@
 	width: 100%;
 	background-color: var(--bg-color);
 	border-bottom: 1px solid var(--primary-border);
+	z-index: 999;
 }
 
 .single-page .nav .home {

@@ -14,8 +14,13 @@ skills: [HTML, CSS, JAVASCRIPT]
 <div class="center">
 	<form class="search-form">
 		<div class="search-box">
-			<h2>검색어</h2>
-			<input type="text" class="keyword" name="keyword">
+			<h2>키워드</h2>
+			<div class="keyword-box">
+				<input type="text" class="keyword" name="keyword">
+				<div class="auto-complete">
+					<p class='term-empty'>검색할 단어를 입력해주세요.</p>
+				</div>
+			</div>
 		</div>
 	</form>
 

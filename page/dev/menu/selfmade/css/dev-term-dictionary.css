@@ -28,10 +28,55 @@
 	text-align: right;
 }
 
-.search-form .search-box .keyword {
+.search-form .search-box .keyword-box {
+	position: relative;
 	min-width: 50%;
-	padding: 12px 15px;
+}
+
+.search-form .search-box .keyword-box .keyword {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.7em 0.9em;
 	font-size: 1.1em;
+}
+
+/* Mobile, Tablet Screen */
+@media screen and (max-width: 1023px) {
+	.search-form .search-box .keyword-box .keyword {
+		font-size: 0.9em;
+	}
+}
+
+.search-form .search-box .keyword-box .auto-complete {
+	display: none;
+	position: absolute;
+	box-sizing: border-box;
+	width: 100%;
+	border: 1px solid #c1c1c1;
+	border-top: none;
+	background-color: var(--bg-color);
+	font-size: 1.1em;
+	color: var(--text-middle-color);
+	z-index: 1;
+}
+
+.search-form .search-box .keyword-box .auto-complete .term-empty {
+	padding: 0.7em 0.9em;
+}
+
+.search-form .search-box .keyword-box .auto-complete .term-title {
+	padding: 0.7em 0.9em;
+	border-bottom: 1px solid #c1c1c1;
+	cursor: pointer;
+}
+
+.search-form .search-box .keyword-box .auto-complete .term-title:hover {
+	background-color: var(--blue-gray);
+	color: var(--text-color);
+}
+
+.search-form .search-box .keyword-box .auto-complete .term-title:last-child {
+	border-bottom: none;
 }
 
 .term-list {
