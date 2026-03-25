@@ -35,14 +35,14 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
 
-sass:
-  sass_dir: _sass
-
 host: 127.0.0.1
 port: 4000
 encoding: "utf-8"
 livereload: true
 # incremental: true   # 변경된 파일만 빌드
+
+paginate: 6
+paginate_path: "/page-:num/"
 
 settings:
   url:

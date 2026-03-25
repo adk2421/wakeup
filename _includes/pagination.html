@@ -1,0 +1,38 @@
+{% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}">◂ 이전</a>
+    {% else %}
+      <span>◂ 이전</span>
+    {% endif %}
+
+    {% assign group_size = 5 %}
+    {% assign current_group = paginator.page | minus: 1 | divided_by: group_size %}
+    {% assign start_page = current_group | times: group_size | plus: 1 %}
+    {% assign end_page = start_page | plus: group_size | minus: 1 %}
+
+    {% if end_page > paginator.total_pages %}
+      {% assign end_page = paginator.total_pages %}
+    {% endif %}
+
+    <ul class="page-numbers">
+      {% for page in (start_page..end_page) %}
+        <li>
+          {% if page == paginator.page %}
+            <span class="current-page">{{ page }}</span>
+          {% elsif page == 1 %}
+            <a href="{{ '/' | relative_url }}">{{ page }}</a>
+          {% else %}
+            <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}">다음 ▸</a>
+    {% else %}
+      <span>다음 ▸</span>
+    {% endif %}
+  </div>
+{% endif %}

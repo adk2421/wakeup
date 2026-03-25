@@ -5,10 +5,10 @@ layout: default
 <div class="index">
 	<h2 class="menu-title">전체 포스트</h2>
 	<div class="post">
-		{% if site.posts.size == 0 %}
+		{% if paginator.posts.size == 0 %}
 			<div class="empty-post">포스트 없음</div>
 		{% endif %}
-		{% for post in site.posts %}
+		{% for post in paginator.posts %}
 			{% assign menu = site.data.menu | where: "name", post.categories[0] | first %}
 			{% if menu %}
 				{% assign subMenu = menu.subMenu | where: "name", post.categories[1] | first %}
@@ -31,4 +31,5 @@ layout: default
 			</div>
 		{% endfor %}
 	</div>
+	{% include pagination.html %}
 </div>
