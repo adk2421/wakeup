@@ -35,7 +35,7 @@
 }
 
 .container .menu-bar div.profile .site-title {
-	margin-bottom: 2px;
+	margin-bottom: 6px;
 	text-align: center;
 }
 
@@ -47,7 +47,7 @@
 .container .menu-bar div.profile .profile-name {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 20px;
+	margin-bottom: 26px;
 	text-align: center;
 	color: var(--secondary-text);
 }
