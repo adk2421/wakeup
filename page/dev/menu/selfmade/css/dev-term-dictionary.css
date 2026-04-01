@@ -54,9 +54,9 @@
 	width: 100%;
 	border: 1px solid #c1c1c1;
 	border-top: none;
-	background-color: var(--bg-color);
+	background-color: var(--primary-bg);
 	font-size: 1.1em;
-	color: var(--text-middle-color);
+	color: var(--secondary-text);
 	z-index: 1;
 }
 
@@ -72,7 +72,7 @@
 
 .search-form .search-box .keyword-box .auto-complete .term-title:hover {
 	background-color: var(--blue-gray);
-	color: var(--text-color);
+	color: var(--primary-text);
 }
 
 .search-form .search-box .keyword-box .auto-complete .term-title:last-child {
@@ -87,6 +87,7 @@
 .term-list .term-box {
 	padding: 1.5em 1em;
 	border-top: 1px solid #c1c1c1;
+	cursor: pointer;
 }
 
 .term-list .term-box:last-child {
@@ -97,4 +98,9 @@
 	font-size: 1.5em;
 	font-weight: 600;
 	margin-bottom: 0.2em;
+}
+
+.term-list .term-box:hover .term-title {
+	color: #047499;
+	/* color: #73941a; */
 }

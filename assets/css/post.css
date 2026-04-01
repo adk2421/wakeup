@@ -106,7 +106,7 @@
 
 .post .post-header .post-meta {
 	font-weight: 500;
-	color: var(--text-light-color);
+	color: var(--tertiary-text);
 }
 
 .post .post-header .post-meta .icon {
@@ -133,16 +133,16 @@
 	top: -17px;
 	margin-left: 2px;
 	font-size: 0.75em;
-	color: var(--text-middle-color);
+	color: var(--secondary-text);
 }
 
 .post .post-content .caption a {
 	font-weight: 400;
-	color: var(--text-middle-color);
+	color: var(--secondary-text);
 }
 
 .post .post-content .caption a:hover {
-	color: var(--text-light-color);
+	color: var(--tertiary-text);
 }
 
 .post .post-content .item-box {

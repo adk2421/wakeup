@@ -15,24 +15,27 @@
 	--primary-light: #efefef;
 	--secondary-light: #fdfdfd;
 
-	--text-color: #333333;
-	--text-middle-color: #666666;
-	--text-light-color: #999999;
-
-	--bg-color: #fdfdfd;
-	--bg-middle-color: #f2f2f2;
-	--bg-dark-color: #e4e4e4;
+	--primary-bg: #fdfdfd;
+	--secondary-bg: #f2f2f2;
+	--tertiary-bg: #e4e4e4;
 
 	--primary-border: #d6d6d6;
 	--secondary-border: #dfdfdf;
 	--tertiary-border: #8e8e8e;
+	
+	--primary-text: #333333;
+	--secondary-text: #666666;
+	--tertiary-text: #999999;
 
 	--primary-btn-active: var(--primary-color);
 	--primary-btn-active-text: var(--primary-light);
 	--primary-btn-hover: var(--secondary-color);
 	--primary-btn-hover-text: var(--secondary-light);
-
+	
 	--primary-text-hover: #066cc5;
+	
+	--text-hover-blue: #047499;
+	--text-hover-green: #73941a;
 
 	--marker-orange: #ffdc8c;
 	--marker-blue: #2c6691;
@@ -54,8 +57,8 @@ body {
 	min-height: 100vh;
 	font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	line-height: 1.5;
-	color: var(--text-color);
-	background-color: var(--bg-color);
+	color: var(--primary-text);
+	background-color: var(--primary-bg);
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-feature-settings: "kern" 1;
 	-moz-font-feature-settings: "kern" 1;
@@ -75,7 +78,7 @@ body {
 	flex-direction: column;
 	width: 300px;
 	min-width: 300px;
-	background-color: var(--bg-color);
+	background-color: var(--primary-bg);
 	border-right: 1px solid var(--primary-border);
 	user-select: none;
 }
@@ -86,7 +89,7 @@ body {
 	justify-content: space-between;
 	width: 100%;
 	height: 100%;
-	background-color: var(--bg-color);
+	background-color: var(--primary-bg);
 	animation: fade-in 0.4s ease-out;
 }
 
@@ -150,7 +153,7 @@ body {
 		z-index: 999;
 		width: 100%;
 		min-width: 0;
-		background-color: var(--bg-middle-color);
+		background-color: var(--secondary-bg);
 		border-bottom: 1px solid var(--primary-border);
 	}
 
