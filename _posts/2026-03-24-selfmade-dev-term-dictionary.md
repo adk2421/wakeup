@@ -84,4 +84,5 @@ skills: [HTML, CSS, JAVASCRIPT]
 	</div>
 </div>
 
-<script src="/wakeup/page/dev/menu/selfmade/js/dev-term-dictionary.js"></script>
+<script src="{{ '/page/dev/menu/selfmade/js/dev-term-dictionary.js' | relative_url }}"></script>
+<script src="{{ '/page/dev/menu/selfmade/data/dev-term.js' | relative_url }}"></script>
